@@ -24,7 +24,11 @@ if (theme.fonts.font_family.secondary) {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./source/pages/**/*.html", "./source/partials/**/*.html"],
+  content: [
+    "./source/pages/**/*.html",
+    "./source/partials/**/*.html",
+    "./source/scripts/**/*.js",
+  ],
   darkMode: "class",
   theme: {
     screens: {
