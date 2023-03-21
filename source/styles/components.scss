@@ -5,7 +5,7 @@
 
 // container
 .container {
-  @apply mx-auto max-w-[1000px] px-4;
+  @apply mx-auto max-w-[1170px] px-4;
 }
 
 // form style
@@ -31,50 +31,50 @@
 .notice {
   .notice-body {
     p {
-      @apply my-0 text-text dark:text-darkmode-light;
+      @apply my-0 text-text;
     }
   }
 
   &.note {
     .notice-head {
-      @apply bg-[#7fb6d9] dark:bg-[#6ab0de];
+      @apply bg-[#7fb6d9];
     }
     .notice-body {
-      @apply bg-[#7fb6d9]/25 dark:bg-[#6ab0de]/25;
+      @apply bg-[#7fb6d9]/25;
     }
   }
 
   &.tip {
     .notice-head {
-      @apply bg-[#73e273] dark:bg-[#78c578];
+      @apply bg-[#73e273];
     }
     .notice-body {
-      @apply bg-[#73e273]/25 dark:bg-[#78c578]/25;
+      @apply bg-[#73e273]/25;
     }
   }
 
   &.info {
     .notice-head {
-      @apply bg-[#ffc392] dark:bg-[#f0b37e];
+      @apply bg-[#ffc392];
     }
     .notice-body {
-      @apply bg-[#f0b37e]/25 dark:bg-[#ffc392]/25;
+      @apply bg-[#f0b37e]/25;
     }
   }
 
   &.warning {
     .notice-head {
-      @apply bg-[#ff918c] dark:bg-[#e06f6c];
+      @apply bg-[#ff918c];
     }
     .notice-body {
-      @apply bg-[#ff918c]/25 dark:bg-[#e06f6c]/25;
+      @apply bg-[#ff918c]/25;
     }
   }
 }
 
 // tabcomponent
 .active-tab {
-  @apply rounded-t-lg bg-theme-light text-primary dark:bg-theme-dark;
+  @apply rounded-t-lg bg-theme-light text-primary;
 }
 
 .tab-element {
@@ -97,16 +97,16 @@
   @apply prose-h1:text-h1-sm md:prose-h1:text-h1;
   @apply prose-h2:text-h2-sm md:prose-h2:text-h2;
   @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
-  @apply prose-hr:border-border prose-hr:dark:border-darkmode-border;
-  @apply prose-p:text-base prose-p:text-text prose-p:dark:text-light;
-  @apply prose-blockquote:border-primary prose-blockquote:bg-theme-light prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:dark:bg-theme-dark;
+  @apply prose-hr:border-border;
+  @apply prose-p:text-base prose-p:text-text;
+  @apply prose-blockquote:border-primary prose-blockquote:bg-theme-light prose-blockquote:py-1 prose-blockquote:px-4;
   @apply prose-code:px-1 prose-code:text-primary;
   @apply prose-pre:rounded-none;
-  @apply prose-strong:text-dark prose-strong:dark:text-light;
+  @apply prose-strong:text-dark;
   @apply prose-a:text-primary prose-a:no-underline hover:prose-a:underline;
-  @apply prose-li:text-text prose-li:dark:text-light;
-  @apply prose-table:overflow-hidden prose-table:border prose-table:border-border prose-table:dark:border-darkmode-border;
-  @apply prose-thead:border-border prose-thead:bg-theme-light prose-th:py-4 prose-th:px-4 prose-th:text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-theme-dark prose-th:dark:text-light;
-  @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
-  @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-light;
+  @apply prose-li:text-text;
+  @apply prose-table:overflow-hidden prose-table:border prose-table:border-border ;
+  @apply prose-thead:border-border prose-thead:bg-theme-light prose-th:py-4 prose-th:px-4;
+  @apply prose-tr:border-border;
+  @apply prose-td:px-3 prose-td:py-4;
 }
