@@ -1,45 +1,18 @@
 <section class="section">
   <div class="container">
-    <h2 class="h1 mb-4">Tab Component</h2>
-    <ul
-      class="tabs flex flex-wrap text-center text-sm font-medium text-gray-500"
-    >
-      <li class="active-tab mr-2">
-        <a
-          aria-current="page"
-          class="inline-block cursor-pointer rounded-t-lg border p-4 hover:bg-theme-light hover:text-primary"
-          >Tab 1</a
-        >
-      </li>
-      <li class="mr-2">
-        <a
-          class="inline-block cursor-pointer rounded-t-lg border p-4 hover:bg-theme-light hover:text-primary"
-          >Tab 2</a
-        >
-      </li>
-      <li class="mr-2">
-        <a
-          class="inline-block cursor-pointer rounded-t-lg border p-4 hover:bg-theme-light hover:text-primary"
-          >Tab 3</a
-        >
-      </li>
-    </ul>
-    <div class="rounded-lg border">
-      <p class="tab-element active-tab p-4 text-left text-dark">
-        Tab-1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-        quis a animi magnam! Ea numquam ullam quod facilis! Iste officia error
-        eius earum officiis veniam at voluptate ullam laborum eum.
-      </p>
-      <p class="tab-element p-4 text-left text-dark">
-        Tab-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-        quis a animi magnam! Ea numquam ullam quod facilis! Iste officia error
-        eius earum officiis veniam at voluptate ullam laborum eum.
-      </p>
-      <p class="tab-element p-4 text-left text-dark">
-        Tab-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-        quis a animi magnam! Ea numquam ullam quod facilis! Iste officia error
-        eius earum officiis veniam at voluptate ullam laborum eum.
-      </p>
+    <div class="tab" data-tab-group="tab-group-name">
+      <ul class="tab-nav" data-tab-nav>
+        <li class="tab-nav-item active" data-tab="0">Tab 1</li>
+        <li class="tab-nav-item" data-tab="1">Tab 2</li>
+        <li class="tab-nav-item" data-tab="2">Tab 3</li>
+      </ul>
+      <div class="tab-content" data-tab-content>
+        <div class="tab-content-panel active" data-tab-panel="0">
+          Tab 1 content
+        </div>
+        <div class="tab-content-panel" data-tab-panel="1">Tab 2 content</div>
+        <div class="tab-content-panel" data-tab-panel="2">Tab 3 content</div>
+      </div>
     </div>
   </div>
 </section>
