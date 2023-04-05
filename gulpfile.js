@@ -13,6 +13,7 @@ const wrapper = require("gulp-wrapper");
 const comments = require("gulp-header-comment");
 const template = require("gulp-template");
 const theme = require("./source/theme.json");
+const node_env = process.argv.slice(2)[0];
 const headerComments = `WEBSITE: https://themefisher.com
                         TWITTER: https://twitter.com/themefisher
                         FACEBOOK: https://facebook.com/themefisher
@@ -43,7 +44,10 @@ gulp.task("pages", function () {
       wrapper({
         header:
           "<!DOCTYPE html>\n<html lang=\"zxx\">\n@@include('head.html')\n@@include('header.html')\n<body>",
-        footer: "@@include('footer.html')\n</body>\n</html>",
+        footer:
+          node_env === "dev"
+            ? "@@include('components/tw-size-indicator.html')\n @@include('footer.html')\n</body>\n</html>"
+            : "@@include('footer.html')\n</body>\n</html>",
       })
     )
     .pipe(
