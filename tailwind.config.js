@@ -32,16 +32,19 @@ module.exports = {
   darkMode: "class",
   theme: {
     screens: {
-      xsm: "480px",
-      sm: "575px",
+      sm: "540px",
       md: "768px",
       lg: "1024px",
-      xl: "1320px"
+      xl: "1280px",
+      "2xl": "1536px",
+    },
+    container: {
+      center: true,
+      padding: "2rem",
     },
     extend: {
       colors: {
         text: theme.colors.default.text_color.default,
-        gray: theme.colors.default.text_color.gray,
         light: theme.colors.default.text_color.light,
         dark: theme.colors.default.text_color.dark,
         primary: theme.colors.default.theme_color.primary,
@@ -49,37 +52,35 @@ module.exports = {
         body: theme.colors.default.theme_color.body,
         border: theme.colors.default.theme_color.border,
         "theme-light": theme.colors.default.theme_color.theme_light,
+        "theme-dark": theme.colors.default.theme_color.theme_dark,
+        darkmode: {
+          text: theme.colors.darkmode.text_color.default,
+          light: theme.colors.darkmode.text_color.light,
+          dark: theme.colors.darkmode.text_color.dark,
+          primary: theme.colors.darkmode.theme_color.primary,
+          secondary: theme.colors.darkmode.theme_color.secondary,
+          body: theme.colors.darkmode.theme_color.body,
+          border: theme.colors.darkmode.theme_color.border,
+          "theme-light": theme.colors.darkmode.theme_color.theme_light,
+          "theme-dark": theme.colors.darkmode.theme_color.theme_dark,
+        },
       },
       fontSize: {
         base: font_base + "px",
         h1: h1 + "rem",
-        "h1-md": h1 * 0.8 + "rem",
-        "h1-sm": h1 * 0.7 + "rem",
+        "h1-sm": h1 * 0.8 + "rem",
         h2: h2 + "rem",
-        "h2-md": h2 * 0.8 + "rem",
+        "h2-sm": h2 * 0.8 + "rem",
         h3: h3 + "rem",
-        "h3-md": h3 * 0.8 + "rem",
+        "h3-sm": h3 * 0.8 + "rem",
         h4: h4 + "rem",
-        "h4-md": h4 * 0.8 + "rem",
         h5: h5 + "rem",
-        "h5-md": h5 * 0.8 + "rem",
         h6: h6 + "rem",
-        "h6-md": h6 * 0.8 + "rem",
       },
       fontFamily: {
         primary: [fontPrimary, fontPrimaryType],
         secondary: [fontSecondary, fontSecondaryType],
       },
-      dropShadow: {
-        "dropdown-menu": "0px 4px 15px rgba(0, 0, 0, 0.05)",
-        "navbar": "0px 25px 15px #a99c9c36",
-      },
-      backgroundImage: {
-        'arrow-down': `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23222' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E")`
-      },
-      transitionTimingFunction: {
-        'collapse': 'cubic-bezier(0.98, 0.93, 0.2, 1)'
-      }
     },
   },
   plugins: [
