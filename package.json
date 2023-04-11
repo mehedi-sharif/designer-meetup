@@ -1,7 +1,7 @@
 {
-  "name": "spydea",
+  "name": "gulp-tailwind-boilerplate",
   "version": "1.1.0",
-  "description": "",
+  "description": "Gulp environment for creating HTML templates",
   "author": "Zeon Studio",
   "license": "UNLICENSED",
   "scripts": {

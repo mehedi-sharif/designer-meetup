@@ -5,17 +5,3 @@ strong {
 code {
   @apply after:border-none;
 }
-select {
-  @apply focus:border-dark-200 focus:shadow-none focus:ring-0 focus:ring-dark-200;
-}
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-}
-
-.gy-0 {
-  --bs-gutter-y: 0rem;
-}

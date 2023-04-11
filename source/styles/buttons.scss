@@ -1,15 +1,11 @@
 .btn {
-  @apply inline-block whitespace-nowrap text-[14px] xl:text-[15px] rounded-md px-8 py-3 font-bold text-dark-200 transition;
-
-  &.btn-md {
-    @apply px-10 py-4;
-  }
+  @apply inline-block border px-5 py-2 font-semibold transition;
 }
 
 .btn-primary {
-  @apply border border-black bg-black text-white hover:bg-white hover:text-black;
+  @apply bg-primary text-white;
 }
 
 .btn-outline-primary {
-  @apply border border-black bg-white hover:bg-black hover:text-white;
+  @apply border-primary bg-transparent hover:bg-primary hover:text-white;
 }
