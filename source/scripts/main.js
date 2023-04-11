@@ -1,33 +1,81 @@
-// import Swiper from '../plugins/swiper/swiper-bundle.js';
-
 (function () {
   "use strict";
+  // Navbar Toggler
+  // ----------------------------------------
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const navbarMenu = document.querySelector(".navbar-wrapper");
 
-  // Preloader js
-  // window.addEventListener("load", (e) => {
-  //   document.querySelector(".preloader").style.display = "none";
-  // });
-
-  // swiper slider
-  new Swiper(".swiper", {
-    loop: true,
-    spaceBetween: 50,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return `<span class=${className}>${index + 1}</span>`;
-      },
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  navbarToggler?.addEventListener("click", (e) => {
+    navbarToggler.classList.toggle("active");
+    navbarMenu.classList.toggle("active");
   });
+
+
+  // Sidebar Collapse in Small Devices
+  // ----------------------------------------
+  const sidebar = document.querySelector(".sidebar");
+  const sidebarToggleBtn = document.querySelector(".sidebar-toggler");
+
+  sidebarToggleBtn?.addEventListener("click", (e) => {
+    if (sidebarToggleBtn.classList.contains("active")) {
+      let overylay = document.querySelector(".overlay");
+      overylay.remove();
+    } else {
+      let overylay = document.createElement("div");
+      overylay.className = "overlay block lg:hidden bg-dark-100 bg-opacity-70 z-[999] w-screen h-screen fixed left-0 top-0";
+      overylay.addEventListener("click", () => {
+        sidebarToggleBtn.click();
+      });
+
+      sidebar.parentElement.appendChild(overylay);
+    }
+
+
+    sidebarToggleBtn.classList.toggle("active");
+    sidebar.classList.toggle("active");
+  });
+  
+
+  // Dropdown Menu Toggler For Mobile
+  // ----------------------------------------
+  const dropdownMenuToggler = document.querySelectorAll(
+    ".nav-dropdown > .nav-link"
+  );
+
+  dropdownMenuToggler.forEach((toggler) => {
+    toggler?.addEventListener("click", (e) => {
+      e.target.parentElement.classList.toggle("active");
+    });
+  });
+
 
   // for tab component
   // Get all the tab groups on the page
   const tabGroups = document.querySelectorAll("[data-tab-group]");
+
+  // Function to set the active tab for a given tab group
+  function setActiveTab(tabGroup, tabName) {
+    // Get the tabs nav and content for this tab group
+    const tabsNav = tabGroup.querySelector("[data-tab-nav]");
+    const tabsContent = tabGroup.querySelector("[data-tab-content]");
+
+    // Remove the active class from all tab nav items and content panes
+    tabsNav.querySelectorAll("[data-tab]").forEach((tabNavItem) => {
+      tabNavItem.classList.remove("active");
+    });
+    tabsContent.querySelectorAll("[data-tab-panel]").forEach((tabPane) => {
+      tabPane.classList.remove("active");
+    });
+
+    // Add the active class to the selected tab nav item and content pane
+    const selectedTabNavItem = tabsNav.querySelector(`[data-tab="${tabName}"]`);
+    selectedTabNavItem.classList.add("active");
+    const selectedTabPane = tabsContent.querySelector(
+      `[data-tab-panel="${tabName}"]`
+    );
+    selectedTabPane.classList.add("active");
+  }
+
   // Loop through each tab group
   tabGroups.forEach((tabGroup) => {
     // Get the tabs nav and content for this tab group
@@ -57,29 +105,6 @@
       });
     });
   });
-
-  // Function to set the active tab for a given tab group
-  function setActiveTab(tabGroup, tabName) {
-    // Get the tabs nav and content for this tab group
-    const tabsNav = tabGroup.querySelector("[data-tab-nav]");
-    const tabsContent = tabGroup.querySelector("[data-tab-content]");
-
-    // Remove the active class from all tab nav items and content panes
-    tabsNav.querySelectorAll("[data-tab]").forEach((tabNavItem) => {
-      tabNavItem.classList.remove("active");
-    });
-    tabsContent.querySelectorAll("[data-tab-panel]").forEach((tabPane) => {
-      tabPane.classList.remove("active");
-    });
-
-    // Add the active class to the selected tab nav item and content pane
-    const selectedTabNavItem = tabsNav.querySelector(`[data-tab="${tabName}"]`);
-    selectedTabNavItem.classList.add("active");
-    const selectedTabPane = tabsContent.querySelector(
-      `[data-tab-panel="${tabName}"]`
-    );
-    selectedTabPane.classList.add("active");
-  }
 
   // modal components
   const modal = document.getElementById("modal");
