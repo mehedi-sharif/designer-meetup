@@ -134,10 +134,10 @@
     @apply fixed inset-0 z-40 hidden h-full w-full bg-black bg-opacity-40;
   }
   &-content {
-    @apply relative left-[5%] top-1/2 z-50 mx-auto max-w-[90%] -translate-y-1/2 rounded-lg bg-body p-8 dark:bg-darkmode-body;
+    @apply bg-body dark:bg-darkmode-body relative top-1/2 z-50 mx-auto max-w-[90%] -translate-y-1/2 rounded-lg p-8;
   }
   &-close {
-    @apply absolute right-3 top-3 h-8 w-8 rounded-full bg-theme-light text-center leading-8 text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark;
+    @apply bg-theme-light text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark absolute right-3 top-3 h-8 w-8 rounded-full text-center leading-8;
   }
 }
 
