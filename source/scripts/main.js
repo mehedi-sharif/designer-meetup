@@ -7,20 +7,20 @@
   // });
 
   // ########################## Theme switcher ##########################
+  var darkMode = false;
+  var themeSwitch = document.querySelectorAll("[data-theme-switcher]");
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    darkMode = true;
+  }
+  if (localStorage.getItem("theme") === "dark") {
+    darkMode = true;
+  } else if (localStorage.getItem("theme") === "light") {
+    darkMode = false;
+  }
+  if (darkMode) {
+    document.documentElement.classList.toggle("dark");
+  }
   document.addEventListener("DOMContentLoaded", () => {
-    var darkMode = false;
-    var themeSwitch = document.querySelectorAll("[data-theme-switcher]");
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      darkMode = true;
-    }
-    if (localStorage.getItem("theme") === "dark") {
-      darkMode = true;
-    } else if (localStorage.getItem("theme") === "light") {
-      darkMode = false;
-    }
-    if (darkMode) {
-      document.documentElement.classList.toggle("dark");
-    }
     [].forEach.call(themeSwitch, function (ts) {
       ts.checked = darkMode ? true : false;
       ts.addEventListener("click", () => {
