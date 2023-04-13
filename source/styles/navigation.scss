@@ -57,7 +57,7 @@ input#nav-toggle:checked ~ #nav-menu {
 
 //theme-switcher
 .theme-switcher {
-  @apply mr-3 lg:mr-0;
+  @apply inline-flex;
 
   label {
     @apply relative inline-block h-4 w-6 cursor-pointer rounded-2xl bg-border lg:w-10;
