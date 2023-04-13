@@ -29,6 +29,7 @@ module.exports = {
     "./source/partials/**/*.html",
     "./source/scripts/**/*.js",
   ],
+  safelist: [{ pattern: /^swiper-/ }],
   darkMode: "class",
   theme: {
     screens: {
@@ -88,6 +89,7 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("tailwind-bootstrap-grid")({
       generateContainer: false,
+      gridGutterWidth: "2rem",
       gridGutters: {
         1: "0.25rem",
         2: "0.5rem",

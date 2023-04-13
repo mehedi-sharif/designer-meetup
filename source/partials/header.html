@@ -1,15 +1,30 @@
-<header class="header">
+<header class="header sticky top-0 z-30">
   <nav class="navbar container">
     <!-- logo -->
     <div class="order-0">
-      <img src="/images/logo.png" height="80" width="100" alt="" />
+      <a class="text-dark dark:text-darkmode-dark" href="/">
+        <img
+          src="images/logo.png"
+          class="dark:hidden"
+          width="154"
+          height="28"
+          alt="gulpplate"
+        />
+        <img
+          src="images/logo-darkmode.png"
+          class="hidden dark:inline-block"
+          width="154"
+          height="28"
+          alt="gulpplate"
+        />
+      </a>
     </div>
     <!-- navbar toggler -->
     <input id="nav-toggle" type="checkbox" class="hidden" />
     <label
       id="show-button"
       for="nav-toggle"
-      class="order-2 flex cursor-pointer items-center md:order-1 md:hidden"
+      class="order-3 flex cursor-pointer items-center text-dark dark:text-white lg:order-1 lg:hidden"
     >
       <svg class="h-6 fill-current" viewBox="0 0 20 20">
         <title>Menu Open</title>
@@ -19,7 +34,7 @@
     <label
       id="hide-button"
       for="nav-toggle"
-      class="order-2 hidden cursor-pointer items-center md:order-1"
+      class="order-3 hidden cursor-pointer items-center text-dark dark:text-white lg:order-1"
     >
       <svg class="h-6 fill-current" viewBox="0 0 20 20">
         <title>Menu Close</title>
@@ -32,14 +47,20 @@
     <!-- /navbar toggler -->
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden w-full md:order-1 md:flex md:w-auto md:space-x-2"
+      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
     >
       <li class="nav-item">
-        <a href="/" class="nav-link block">Home</a>
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="elements.html" class="nav-link">Elements</a>
       </li>
       <li class="nav-item nav-dropdown group relative">
         <span class="nav-link inline-flex items-center">
-          Dropdown
+          Pages
           <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
             <path
               d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
@@ -47,23 +68,87 @@
           </svg>
         </span>
         <ul
-          class="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100"
+          class="nav-dropdown-list hidden group-hover:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100"
         >
           <li class="nav-dropdown-item">
-            <a href="#" class="nav-dropdown-link block"> Dropdown Item 1 </a>
+            <a href="contact.html" class="nav-dropdown-link">Contact</a>
           </li>
           <li class="nav-dropdown-item">
-            <a href="#" class="nav-dropdown-link block"> Dropdown Item 2 </a>
+            <a href="blog.html" class="nav-dropdown-link">Blog</a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="blog-single.html" class="nav-dropdown-link">Blog Single</a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="authors.html" class="nav-dropdown-link">Authors</a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="author-single.html" class="nav-dropdown-link">
+              Author Single
+            </a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="search.html" class="nav-dropdown-link">Search</a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="no-search-found.html" class="nav-dropdown-link">
+              No Search Found
+            </a>
+          </li>
+          <li class="nav-dropdown-item">
+            <a href="404.html" class="nav-dropdown-link"> 404 Page </a>
           </li>
         </ul>
       </li>
     </ul>
-    <div class="order-1 ml-auto flex items-center md:order-2 md:ml-0">
+    <div
+      class="order-1 ml-auto flex items-center md:order-2 lg:ml-0 lg:space-x-6"
+    >
       <a
-        class="cursor-pointer p-2 text-xl text-dark hover:text-primary"
-        href="#"
+        class="hidden border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white lg:inline-block"
+        href="search.html"
       >
         <i class="fa-solid fa-search"></i>
+      </a>
+      <div class="theme-switcher inline-flex">
+        <input id="theme-switcher" data-theme-switcher type="checkbox" />
+        <label for="theme-switcher">
+          <span>
+            <!-- sun -->
+            <svg
+              class="absolute left-[4px] top-[4px] z-10 opacity-100 dark:opacity-0"
+              viewBox="0 0 56 56"
+              fill="#fff"
+              height="16"
+              widrh="16"
+            >
+              <path
+                d="M30 4.6c0-1-.9-2-2-2a2 2 0 0 0-2 2v5c0 1 .9 2 2 2s2-1 2-2Zm9.6 9a2 2 0 0 0 0 2.8c.8.8 2 .8 2.9 0L46 13a2 2 0 0 0 0-2.9 2 2 0 0 0-3 0Zm-26 2.8c.7.8 2 .8 2.8 0 .8-.7.8-2 0-2.9L13 10c-.7-.7-2-.8-2.9 0-.7.8-.7 2.1 0 3ZM28 16a12 12 0 0 0-12 12 12 12 0 0 0 12 12 12 12 0 0 0 12-12 12 12 0 0 0-12-12Zm23.3 14c1.1 0 2-.9 2-2s-.9-2-2-2h-4.9a2 2 0 0 0-2 2c0 1.1 1 2 2 2ZM4.7 26a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4.9c1 0 2-.9 2-2s-1-2-2-2Zm37.8 13.6a2 2 0 0 0-3 0 2 2 0 0 0 0 2.9l3.6 3.5a2 2 0 0 0 2.9 0c.8-.8.8-2.1 0-3ZM10 43.1a2 2 0 0 0 0 2.9c.8.7 2.1.8 3 0l3.4-3.5c.8-.8.8-2.1 0-2.9-.8-.8-2-.8-2.9 0Zm20 3.4c0-1.1-.9-2-2-2a2 2 0 0 0-2 2v4.9c0 1 .9 2 2 2s2-1 2-2Z"
+              />
+            </svg>
+            <!-- moon -->
+            <svg
+              class="absolute left-[4px] top-[4px] z-10 opacity-0 dark:opacity-100"
+              viewBox="0 0 24 24"
+              fill="none"
+              height="16"
+              widrh="16"
+            >
+              <path
+                fill="#000"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.2 2.2c1-.4 2 .6 1.6 1.5-1 3-.4 6.4 1.8 8.7a8.4 8.4 0 0 0 8.7 1.8c1-.3 2 .5 1.5 1.5v.1a10.3 10.3 0 0 1-9.4 6.2A10.3 10.3 0 0 1 3.2 6.7c1-2 2.9-3.5 4.9-4.4Z"
+              />
+            </svg>
+          </span>
+        </label>
+      </div>
+      <a
+        class="btn btn-outline-primary btn-sm hidden lg:inline-block"
+        href="contact.html"
+      >
+        Get In Touch
       </a>
     </div>
   </nav>

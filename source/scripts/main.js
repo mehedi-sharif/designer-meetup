@@ -1,55 +1,90 @@
-// import Swiper from '../plugins/swiper/swiper-bundle.js';
-
 (function () {
   "use strict";
 
-  // Preloader js
+  // ########################## Preloader ##############################
   // window.addEventListener("load", (e) => {
   //   document.querySelector(".preloader").style.display = "none";
   // });
 
-  // swiper slider
-  new Swiper(".swiper", {
+  // ########################## Theme switcher ##########################
+  document.addEventListener("DOMContentLoaded", () => {
+    var darkMode = false;
+    var themeSwitch = document.querySelectorAll("[data-theme-switcher]");
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      darkMode = true;
+    }
+    if (localStorage.getItem("theme") === "dark") {
+      darkMode = true;
+    } else if (localStorage.getItem("theme") === "light") {
+      darkMode = false;
+    }
+    if (darkMode) {
+      document.documentElement.classList.toggle("dark");
+    }
+    [].forEach.call(themeSwitch, function (ts) {
+      ts.checked = darkMode ? true : false;
+      ts.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          document.documentElement.classList.contains("dark") ? "dark" : "light"
+        );
+      });
+    });
+  });
+
+  // ####################### Testimonial Slider #########################
+  new Swiper(".testimonial-slider", {
+    spaceBetween: 24,
     loop: true,
-    spaceBetween: 50,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".testimonial-slider-pagination",
+      type: "bullets",
       clickable: true,
-      renderBullet: function (index, className) {
-        return `<span class=${className}>${index + 1}</span>`;
-      },
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
     },
   });
 
-  // for tab component
-  // Get all the tab groups on the page
+  // ########################## Tab ##########################
+  function setActiveTab(tabGroup, tabName) {
+    const tabsNav = tabGroup.querySelector("[data-tab-nav]");
+    const tabsContent = tabGroup.querySelector("[data-tab-content]");
+
+    tabsNav.querySelectorAll("[data-tab]").forEach((tabNavItem) => {
+      tabNavItem.classList.remove("active");
+    });
+    tabsContent.querySelectorAll("[data-tab-panel]").forEach((tabPane) => {
+      tabPane.classList.remove("active");
+    });
+
+    const selectedTabNavItem = tabsNav.querySelector(`[data-tab="${tabName}"]`);
+    selectedTabNavItem.classList.add("active");
+    const selectedTabPane = tabsContent.querySelector(
+      `[data-tab-panel="${tabName}"]`
+    );
+    selectedTabPane.classList.add("active");
+  }
   const tabGroups = document.querySelectorAll("[data-tab-group]");
-  // Loop through each tab group
   tabGroups.forEach((tabGroup) => {
-    // Get the tabs nav and content for this tab group
     const tabsNav = tabGroup.querySelector("[data-tab-nav]");
     const tabsNavItem = tabsNav.querySelectorAll("[data-tab]");
-
-    // Get the active tab index from local storage, or default to 0 if not set
     const activeTabName =
       localStorage.getItem(`activeTabName-${tabGroup.dataset.tabGroup}`) ||
       tabsNavItem[0].getAttribute("data-tab");
 
-    // Set the active tab
     setActiveTab(tabGroup, activeTabName);
 
-    // Add a click event listener to each tab nav item
     tabsNavItem.forEach((tabNavItem) => {
       tabNavItem.addEventListener("click", () => {
-        // Get the index of the clicked tab nav item
         const tabName = tabNavItem.dataset.tab;
         setActiveTab(tabGroup, tabName);
-
-        // Save the active tab index to local storage
         localStorage.setItem(
           `activeTabName-${tabGroup.dataset.tabGroup}`,
           tabName
@@ -58,54 +93,7 @@
     });
   });
 
-  // Function to set the active tab for a given tab group
-  function setActiveTab(tabGroup, tabName) {
-    // Get the tabs nav and content for this tab group
-    const tabsNav = tabGroup.querySelector("[data-tab-nav]");
-    const tabsContent = tabGroup.querySelector("[data-tab-content]");
-
-    // Remove the active class from all tab nav items and content panes
-    tabsNav.querySelectorAll("[data-tab]").forEach((tabNavItem) => {
-      tabNavItem.classList.remove("active");
-    });
-    tabsContent.querySelectorAll("[data-tab-panel]").forEach((tabPane) => {
-      tabPane.classList.remove("active");
-    });
-
-    // Add the active class to the selected tab nav item and content pane
-    const selectedTabNavItem = tabsNav.querySelector(`[data-tab="${tabName}"]`);
-    selectedTabNavItem.classList.add("active");
-    const selectedTabPane = tabsContent.querySelector(
-      `[data-tab-panel="${tabName}"]`
-    );
-    selectedTabPane.classList.add("active");
-  }
-
-  // modal components
-  const modal = document.getElementById("modal");
-  const modalContainer = document.getElementById("modal-container");
-  const modalOpenBtn = document.getElementById("modal-open-button");
-  const modalCloseBtn = document.getElementById("modal-close-button");
-
-  // modal open button
-  modalOpenBtn.addEventListener("click", () => {
-    modal.classList.remove("hidden");
-    modalContainer.classList.remove("hidden");
-  });
-
-  // modal close button
-  modalCloseBtn.addEventListener("click", () => {
-    modal.classList.add("hidden");
-    modalContainer.classList.add("hidden");
-  });
-
-  // Close the modal click on the modal container
-  modalContainer.addEventListener("click", () => {
-    modal.classList.add("hidden");
-    modalContainer.classList.add("hidden");
-  });
-
-  // Accordion component
+  // ########################## Accordion ##########################
   const accordion = document.querySelectorAll("[data-accordion]");
   accordion.forEach((header) => {
     header.addEventListener("click", () => {
@@ -114,17 +102,39 @@
     });
   });
 
-  // toast component
-  const showToast = () => {
-    const toast = document.getElementById("toast");
-    toast.classList.remove("hidden");
+  // ########################## Modal ##############################
+  const openModalButtons = document.querySelectorAll("[data-modal-open]");
+  const closeModalButtons = document.querySelectorAll("[data-modal-close]");
 
-    setTimeout(() => {
-      toast.classList.add("hidden");
-    }, 3000);
-  };
-  const toastButton = document.getElementById("toast-button");
-  toastButton.addEventListener("click", () => {
-    showToast();
+  function openModal(modal) {
+    if (modal === null) {
+      return null;
+    }
+    const overlay = modal.querySelector("[data-modal-overlay]");
+    modal.style.display = "block";
+    overlay.style.display = "block";
+  }
+
+  function closeModal(modal) {
+    if (modal === null) {
+      return null;
+    }
+    const overlay = modal.querySelector("[data-modal-overlay]");
+    modal.style.display = "none";
+    overlay.style.display = "none";
+  }
+
+  openModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.nextElementSibling;
+      openModal(modal);
+    });
+  });
+
+  closeModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.closest("[data-modal]");
+      closeModal(modal);
+    });
   });
 })();
