@@ -87,9 +87,15 @@
 .tab {
   @apply overflow-hidden rounded-lg border border-border dark:border-darkmode-border;
   &-nav {
-    @apply m-0 flex list-none border-b border-border bg-theme-light p-0 dark:border-darkmode-border dark:bg-darkmode-theme-light;
+    @apply flex border-b border-border bg-theme-light dark:border-darkmode-border dark:bg-darkmode-theme-light;
+    @apply m-0 #{!important};
+    @apply list-none #{!important};
+
     &-item {
-      @apply my-0 cursor-pointer border-b-[3px] border-border px-8 py-2 text-lg text-dark opacity-80 dark:border-light;
+      @apply cursor-pointer border-b-[3px] border-border py-2 text-lg text-dark opacity-80 dark:border-light;
+      @apply my-0 #{!important};
+      @apply px-8 #{!important};
+
       &.active {
         @apply border-b-[3px] border-dark opacity-100 dark:border-darkmode-primary;
       }
