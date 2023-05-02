@@ -5,7 +5,7 @@
   // window.addEventListener("load", (e) => {
   //   document.querySelector(".preloader").style.display = "none";
   // });
-
+  //inti marquees
   const marquees = document.querySelectorAll(".marquee");
   [...marquees].forEach((marquee) => {
     if (!marquee) return;
@@ -16,6 +16,13 @@
       gap: 24,
     });
   });
+
+  //sponsors carousel
+  new Swiper('.sponsor-carousel', {
+    loop: true,
+    slidesPerView: 6,
+    spaceBetween: 70
+  })
 
   // ####################### Testimonial Slider #########################
   // new Swiper(".testimonial-slider", {
