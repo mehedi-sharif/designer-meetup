@@ -167,3 +167,12 @@
     @apply -right-2;
   }
 }
+
+// marquee
+.marquee {
+  @apply overflow-hidden;
+
+  &-wrapper {
+    @apply flex items-center space-x-6;
+  }
+}
