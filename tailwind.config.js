@@ -35,7 +35,7 @@ module.exports = {
     screens: {
       sm: "540px",
       md: "768px",
-      lg: "1024px",
+      lg: "992px",
       xl: "1280px",
       "2xl": "1536px",
     },
@@ -54,17 +54,6 @@ module.exports = {
         border: theme.colors.default.theme_color.border,
         "theme-light": theme.colors.default.theme_color.theme_light,
         "theme-dark": theme.colors.default.theme_color.theme_dark,
-        darkmode: {
-          text: theme.colors.darkmode.text_color.default,
-          light: theme.colors.darkmode.text_color.light,
-          dark: theme.colors.darkmode.text_color.dark,
-          primary: theme.colors.darkmode.theme_color.primary,
-          secondary: theme.colors.darkmode.theme_color.secondary,
-          body: theme.colors.darkmode.theme_color.body,
-          border: theme.colors.darkmode.theme_color.border,
-          "theme-light": theme.colors.darkmode.theme_color.theme_light,
-          "theme-dark": theme.colors.darkmode.theme_color.theme_dark,
-        },
       },
       fontSize: {
         base: font_base + "px",
