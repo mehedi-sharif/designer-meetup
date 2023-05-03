@@ -176,3 +176,16 @@
     @apply flex items-center space-x-6;
   }
 }
+
+//card
+.card {
+  @apply md:flex items-center justify-center md:justify-start text-center md:text-start;
+
+  &-img {
+    @apply mx-auto w-[120px] h-[120px] xl:w-[170px] xl:h-[170px] rounded-full md:mx-0 mb-6 md:mb-0;
+  }
+
+  &-content {
+    @apply md:ml-6;
+  }
+}
