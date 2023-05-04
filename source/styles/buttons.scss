@@ -7,7 +7,11 @@
 }
 
 .btn-primary {
-  @apply border-primary bg-primary text-white   ;
+  @apply text-dark bg-white inline-flex items-center justify-center;
+
+  svg {
+    @apply mr-2.5;
+  }
 }
 
 .btn-outline-primary {

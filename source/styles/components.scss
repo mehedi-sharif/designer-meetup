@@ -177,15 +177,36 @@
   }
 }
 
-//card
-.card {
+//person
+.person {
   @apply md:flex items-center justify-center md:justify-start text-center md:text-start;
 
   &-img {
     @apply mx-auto w-[120px] h-[120px] xl:w-[170px] xl:h-[170px] rounded-full md:mx-0 mb-6 md:mb-0;
   }
 
-  &-content {
+  &-info {
     @apply md:ml-6;
+  }
+}
+
+//card
+.card {
+  @apply  h-full rounded-2xl flex;
+
+  &-icon {
+    @apply mx-auto mb-6 lg:mb-12;
+  }
+
+  &-body {
+    @apply p-8 rounded-[inherit] m-[1px] bg-body flex-1;
+
+    h3 {
+      @apply lg:mb-12 mb-6 lg:pb-12 pb-6 border-b border-[#4B4755];
+    }
+
+    ol > li {
+      @apply mb-4 text-lg;
+    }
   }
 }
