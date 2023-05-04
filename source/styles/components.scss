@@ -34,45 +34,6 @@
   }
 }
 
-// notice
-.notice {
-  @apply mb-6 rounded-lg border px-8 py-6;
-  &-head {
-    @apply flex items-center;
-    svg {
-      @apply mr-3;
-    }
-    p {
-      @apply font-secondary text-xl font-semibold text-dark ;
-    }
-  }
-  .notice-body {
-    @apply mt-3;
-    p {
-      @apply my-0;
-    }
-  }
-
-  &.success {
-    @apply text-[#40D294];
-    @apply border-current;
-  }
-
-  &.info {
-    @apply text-[#1B83E2];
-    @apply border-current;
-  }
-
-  &.warning {
-    @apply text-[#E3A72C];
-    @apply border-current;
-  }
-
-  &.error {
-    @apply text-[#DB2C23];
-    @apply border-current;
-  }
-}
 
 // swiper pagination
 .swiper-pagination-bullet {
@@ -90,7 +51,7 @@
     @apply flex border-b border-border   ;
 
     &-item {
-      @apply cursor-pointer border-b-[3px] border-border py-2 text-lg text-dark opacity-80 ;
+      @apply cursor-pointer border-b-[3px] border-border py-2  text-dark opacity-80 ;
 
       &.active {
         @apply border-b-[3px] border-dark opacity-100 ;
@@ -114,7 +75,7 @@
 .accordion {
   @apply mb-6 overflow-hidden rounded-lg border border-border   ;
   &-header {
-    @apply flex cursor-pointer items-center justify-between px-8 py-4 text-lg text-dark;
+    @apply flex cursor-pointer items-center justify-between px-8 py-4  text-dark;
   }
   &-icon {
     @apply h-[.8em] w-[.8em] rotate-[-90deg] transition-transform duration-200;
@@ -199,14 +160,21 @@
   }
 
   &-body {
-    @apply p-8 rounded-[inherit] m-[1px] bg-body flex-1;
+    @apply p-6 lg:p-8 rounded-[inherit] m-[1px] bg-body flex-1;
 
     h3 {
       @apply lg:mb-12 mb-6 lg:pb-12 pb-6 border-b border-[#4B4755];
     }
 
     ol > li {
-      @apply mb-4 text-lg;
+      @apply mb-4 ;
     }
+  }
+}
+
+.platinum-sponsors {
+  @apply grid grid-cols-2 sm:grid-cols-3 gap-x-14 gap-y-8 items-center lg:gap-y-16 text-end;
+  img {
+    @apply inline-block w-full h-[70px] object-contain;
   }
 }

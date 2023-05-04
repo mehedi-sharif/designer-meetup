@@ -12,16 +12,12 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .header {
-  @apply bg-body py-8 lg:py-14  px-4;
+  @apply bg-body py-4 lg:py-14  px-4;
 }
 
 // navbar items
 .navbar {
   @apply relative flex flex-wrap items-center justify-between;
-
-  .register-cta {
-    @apply text-sm xl:text-xl;
-  }
 }
 
 .navbar-brand {
@@ -44,7 +40,7 @@ input#nav-toggle:checked ~ #nav-menu {
   @apply block p-3 font-normal text-xs text-[#AAAAAA] transition  lg:px-2 lg:py-3;
 
   span {
-    @apply block text-sm xl:text-base text-white leading-5 ;
+    @apply block text-sm xl:text-[16px] text-white leading-5 ;
   }
 
   &:hover span {
@@ -103,7 +99,7 @@ input#nav-toggle:checked ~ #nav-menu {
 .search-modal {
   @apply invisible absolute left-0 right-0 top-0 z-10 h-10 bg-white opacity-0 transition  md:h-full;
   .form-input {
-    @apply h-full w-full border-0 text-lg;
+    @apply h-full w-full border-0 ;
   }
   .search-close {
     @apply absolute right-2 top-1/2 -translate-y-1/2 p-3 text-h4;

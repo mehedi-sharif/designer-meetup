@@ -7,7 +7,7 @@
 }
 
 .btn-primary {
-  @apply text-dark bg-white inline-flex items-center justify-center;
+  @apply text-dark bg-white inline-flex items-center justify-center text-sm xl:text-xl;
 
   svg {
     @apply mr-2.5;
@@ -16,4 +16,14 @@
 
 .btn-outline-primary {
   @apply border-dark bg-transparent text-dark hover:bg-dark hover:text-white;
+}
+
+
+//register-btn
+.register-cta {
+  @apply text-sm 2xl:text-xl;
+
+  svg {
+    @apply hidden lg:block;
+  }
 }

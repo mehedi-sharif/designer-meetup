@@ -18,11 +18,21 @@
   });
 
   //sponsors carousel
-  new Swiper('.sponsor-carousel', {
+  new Swiper(".sponsor-carousel", {
     loop: true,
-    slidesPerView: 6,
-    spaceBetween: 70
-  })
+    slidesPerView: 3,
+    spaceBetween: 24,
+    breakpoints: {
+      650: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 6,
+        spaceBetween: 70,
+      },
+    },
+  });
 
   // ####################### Testimonial Slider #########################
   // new Swiper(".testimonial-slider", {

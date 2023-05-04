@@ -22,17 +22,17 @@ h1,
 
 h2,
 .h2 {
-  @apply text-h2-sm md:text-h2;
+  @apply text-h2-sm xl:text-[96px];
 }
 
 h3,
 .h3 {
-  @apply text-h3-sm md:text-h3;
+  @apply text-h3-sm xl:text-[48px];
 }
 
 h4,
 .h4 {
-  @apply text-h4 font-medium;
+  @apply text-h4-sm lg:text-h4 font-medium;
 }
 
 h5,

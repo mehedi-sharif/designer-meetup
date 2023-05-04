@@ -37,7 +37,7 @@ module.exports = {
       md: "768px",
       lg: "992px",
       xl: "1280px",
-      "2xl": "1536px",
+      "2xl": "1440px",
     },
     container: {
       center: true,
@@ -64,6 +64,7 @@ module.exports = {
         h3: h3 + "rem",
         "h3-sm": h3 * 0.8 + "rem",
         h4: h4 + "rem",
+        "h4-sm": h4 * 0.8 + "rem",
         h5: h5 + "rem",
         h6: h6 + "rem",
       },
@@ -78,7 +79,7 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("tailwind-bootstrap-grid")({
       generateContainer: false,
-      gridGutterWidth: "2rem",
+      gridGutterWidth: "1.5rem",
       gridGutters: {
         1: "0.25rem",
         2: "0.5rem",
