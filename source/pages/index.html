@@ -52,8 +52,8 @@
 <!-- end hero -->
 
 <!-- Intro -->
-<section class="mb-20 relative">
-    <div class="absolute -top-[100px] left-0 w-full bottom-0 -z-[1] bg-[url('../images/texture.svg')] bg-no-repeat bg-cover"></div>
+<section class="pb-20 relative bg-[url('../images/texture.png')] bg-no-repeat bg-cover bg-fixed">
+    <!-- <div class="absolute top-[-120px] left-0 w-full h-full bottom-0 -z-[1] bg-[url('../images/texture.png')] bg-no-repeat bg-cover bg-fixed"></div> -->
     <div class="container mb-10">
         <p class="mb-4  font-medium">We will place platinum sponsor’s logo here</p>
         <div class="swiper sponsor-carousel mb-[70px]">
@@ -100,19 +100,19 @@
                 </div>
             </div>
             <div class="lg:col-4">
-                <div class="bg-white rounded-2xl p-6 relative mb-6">
+                <div class="bg-white rounded-2xl p-6 relative mb-6 overflow-hidden">
                     <span class="text-primary">Become a</span>
                     <h4 class="text-dark">Sponsor</h4>
-                    <a class="absolute right-6 bottom-6 w-8 h-8 inline-flex items-center justify-center" href="#">
+                    <a class="stretch-link float-right w-8 h-8 -mt-6 -mr-2 inline-flex items-center justify-center" href="#">
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.45788 0.457528L1.45788 3.11625L11.9891 3.12568L0.515069 14.5997L2.40069 16.4853L13.8747 5.01129L13.8841 15.5425L16.5428 15.5425V0.457528H1.45788Z" fill="#FF1B82" />
                         </svg>
                     </a>
                 </div>
-                <div class="bg-gradient-to-r from-[#292731] to-[#201F24] rounded-2xl p-6 relative">
+                <div class="bg-gradient-to-r from-[#292731] to-[#201F24] rounded-2xl p-6 relative overflow-hidden">
                     <span class="text-[#aaaaaa]">Become a</span>
                     <h4>Sponsor</h4>
-                    <a class="absolute right-6 bottom-6 w-8 h-8 inline-flex items-center justify-center" href="#">
+                    <a class="stretch-link float-right w-8 h-8 -mt-6 -mr-2 inline-flex items-center justify-center" href="#">
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.5429 16.5425L15.5429 13.8838L5.01168 13.8743L16.4857 2.40034L14.6 0.514719L3.12606 11.9887L3.11663 1.45753L0.45791 1.45753V16.5425H15.5429Z" fill="white" />
                         </svg>
@@ -121,11 +121,10 @@
             </div>
         </div>
     </div>
-    <div class="marquee mb-16">
-        <div class="marquee-wrapper">
-            <div class="marquee-slide">
-                <p class="text-[164px] leading-[144px] text-white font-secondary">designers / portfolio Review</p>
-            </div>
+    <div class="scroll-marquee mb-10 lg:mb-20">
+        <div class="scroll-marquee-wrapper flex items-center">
+            <p class="scroll-item mr-10 text-[164px] leading-none text-white font-secondary whitespace-nowrap">designers / portfolio Review </p>
+            <p class="scroll-item mr-10 text-[164px] leading-none text-white font-secondary whitespace-nowrap">designers / portfolio Review </p>
         </div>
     </div>
     <div class="container">
@@ -379,11 +378,11 @@
             </div>
         </div>
     </div>
-    <div class="marquee">
-        <div class="marquee-wrapper">
-            <div class="marquee-slide">
-                <p class="text-[164px] leading-[144px] text-[#29272E] font-secondary">designers / portfolio Review</p>
-            </div>
+    <div class="scroll-marquee mb-10 lg:mb-20">
+        <div class="scroll-marquee-wrapper flex items-center">
+            <p class="scroll-item mr-10 text-[164px] leading-none text-[#29272E] font-secondary whitespace-nowrap">designers / portfolio Review </p>
+            <p class="scroll-item mr-10 text-[164px] leading-none text-[#29272E] font-secondary whitespace-nowrap">designers / portfolio Review </p>
+            <p class="scroll-item mr-10 text-[164px] leading-none text-[#29272E] font-secondary whitespace-nowrap">designers / portfolio Review </p>
         </div>
     </div>
 </section>
@@ -526,11 +525,11 @@
             </a>
         </div>
     </div>
-    <div class="marquee">
-        <div class="marquee-wrapper">
-            <div class="marquee-slide">
-                <p class="text-[164px] leading-[144px] text-[#29272E] font-secondary">designers / portfolio Review</p>
-            </div>
+    <div class="scroll-marquee mb-10 lg:mb-20">
+        <div class="scroll-marquee-wrapper flex items-center">
+            <p class="scroll-item mr-10 text-[164px] text-[#29272E] leading-none font-secondary whitespace-nowrap">designers / portfolio Review </p>
+            <p class="scroll-item mr-10 text-[164px] text-[#29272E] leading-none font-secondary whitespace-nowrap">designers / portfolio Review </p>
+            <p class="scroll-item mr-10 text-[164px] text-[#29272E] leading-none font-secondary whitespace-nowrap">designers / portfolio Review </p>
         </div>
     </div>
 </section>
@@ -691,15 +690,15 @@
             </div>
         </div>
         <!-- co-sponsors -->
-        <div class="bg-[#201F24] rounded-2xl p-6 xl:p-12">
+        <div class="bg-[#201F24] rounded-2xl p-6 xl:p-12 xl:py-6">
             <div class="row">
                 <div class="lg:col-3 mb-6 lg:mb-0">
                     <p class="text-2xl lg:text-[2rem]">Co-Sponsors</p>
                 </div>
                 <div class="lg:col-9 flex items-center flex-wrap  lg:justify-end">
-                    <img class="mr-6 md:mr-16" src="images/sponsors/co-sponsor-1.svg" alt="">
-                    <img class="mr-6 md:mr-16" src="images/sponsors/co-sponsor-2.svg" alt="">
-                    <img class="mr-6 md:mr-16" src="images/sponsors/co-sponsor-3.svg" alt="">
+                    <img class="my-6 mr-6 md:mr-16" src="images/sponsors/co-sponsor-1.svg" alt="">
+                    <img class="my-6 mr-6 md:mr-16" src="images/sponsors/co-sponsor-2.svg" alt="">
+                    <img class="my-6 mr-6 md:mr-16" src="images/sponsors/co-sponsor-3.svg" alt="">
                     <img src="images/sponsors/co-sponsor-4.svg" alt="">
                 </div>
             </div>

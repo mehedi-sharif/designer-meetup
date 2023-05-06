@@ -138,6 +138,11 @@
   }
 }
 
+//scroll-marquee
+.scroll-marquee {
+  @apply overflow-hidden;
+}
+
 //person
 .person {
   @apply md:flex items-center justify-center md:justify-start text-center md:text-start;

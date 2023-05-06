@@ -34,6 +34,62 @@
     },
   });
 
+
+  //scroll marquee 
+  const marqueeElements = [...document.querySelectorAll(".scroll-marquee")];
+  window.addEventListener('load', () => {
+    function initScrollMarquee () {
+      marqueeElements.map((item, index) => {
+        const wrapperElement = item.querySelector('.scroll-marquee-wrapper');
+        return {ele: item, wrapperEl: wrapperElement, scrollX: item.scrollWidth - item.clientWidth, direction: index % 2 === 0 ? 1 : -1}
+      }).forEach(marquee => {
+        if(marquee.direction === -1 ) {
+          console.log(marquee)
+          gsap.set(marquee.wrapperEl, {x: -marquee.scrollX})
+          gsap.to(marquee.wrapperEl, {
+            x: 0,
+            scrollTrigger: {
+              trigger: marquee.ele,
+              start: "bottom bottom",
+              end: 'bottom 20',
+              fastScroll: true,
+              scrub: .5,
+            },
+          });
+        } else {
+          gsap.to(marquee.wrapperEl, {
+            x: -marquee.scrollX,
+            scrollTrigger: {
+              trigger: marquee.ele,
+              start: "bottom bottom",
+              end: 'bottom 20',
+              fastScroll: true,
+              scrub: .5,
+            },
+          });
+        }
+      })
+    }
+  
+    initScrollMarquee()
+    window.addEventListener('resize', () => {
+      initScrollMarquee()
+    })
+  })
+
+
+  // gsap.to(".scroll-marquee-wrapper", {
+  //   x: -(scroller.scrollWidth),
+  //   duration: 1.5,
+  //   scrollTrigger: {
+  //     trigger: ".scroll-marquee",
+  //     start: "bottom bottom",
+  //     end: () => `+=${window.innerHeight * .75}`,
+  //     fastScroll: true,
+  //     scrub: 1,
+  //   },
+  // });
+
   // ####################### Testimonial Slider #########################
   // new Swiper(".testimonial-slider", {
   //   spaceBetween: 24,
