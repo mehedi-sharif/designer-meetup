@@ -78,77 +78,46 @@
   })
 
 
-  // gsap.to(".scroll-marquee-wrapper", {
-  //   x: -(scroller.scrollWidth),
-  //   duration: 1.5,
-  //   scrollTrigger: {
-  //     trigger: ".scroll-marquee",
-  //     start: "bottom bottom",
-  //     end: () => `+=${window.innerHeight * .75}`,
-  //     fastScroll: true,
-  //     scrub: 1,
-  //   },
-  // });
-
-  // ####################### Testimonial Slider #########################
-  // new Swiper(".testimonial-slider", {
-  //   spaceBetween: 24,
-  //   loop: true,
-  //   pagination: {
-  //     el: ".testimonial-slider-pagination",
-  //     type: "bullets",
-  //     clickable: true,
-  //   },
-  //   breakpoints: {
-  //     768: {
-  //       slidesPerView: 2,
-  //     },
-  //     992: {
-  //       slidesPerView: 3,
-  //     },
-  //   },
-  // });
-
   // // ########################## Tab ##########################
-  // function setActiveTab(tabGroup, tabName) {
-  //   const tabsNav = tabGroup.querySelector("[data-tab-nav]");
-  //   const tabsContent = tabGroup.querySelector("[data-tab-content]");
+  function setActiveTab(tabGroup, tabName) {
+    const tabsNav = tabGroup.querySelector("[data-tab-nav]");
+    const tabsContent = tabGroup.querySelector("[data-tab-content]");
 
-  //   tabsNav.querySelectorAll("[data-tab]").forEach((tabNavItem) => {
-  //     tabNavItem.classList.remove("active");
-  //   });
-  //   tabsContent.querySelectorAll("[data-tab-panel]").forEach((tabPane) => {
-  //     tabPane.classList.remove("active");
-  //   });
+    tabsNav.querySelectorAll("[data-tab]").forEach((tabNavItem) => {
+      tabNavItem.classList.remove("active");
+    });
+    tabsContent.querySelectorAll("[data-tab-panel]").forEach((tabPane) => {
+      tabPane.classList.remove("active");
+    });
 
-  //   const selectedTabNavItem = tabsNav.querySelector(`[data-tab="${tabName}"]`);
-  //   selectedTabNavItem.classList.add("active");
-  //   const selectedTabPane = tabsContent.querySelector(
-  //     `[data-tab-panel="${tabName}"]`
-  //   );
-  //   selectedTabPane.classList.add("active");
-  // }
-  // const tabGroups = document.querySelectorAll("[data-tab-group]");
-  // tabGroups.forEach((tabGroup) => {
-  //   const tabsNav = tabGroup.querySelector("[data-tab-nav]");
-  //   const tabsNavItem = tabsNav.querySelectorAll("[data-tab]");
-  //   const activeTabName =
-  //     localStorage.getItem(`activeTabName-${tabGroup.dataset.tabGroup}`) ||
-  //     tabsNavItem[0].getAttribute("data-tab");
+    const selectedTabNavItem = tabsNav.querySelector(`[data-tab="${tabName}"]`);
+    selectedTabNavItem.classList.add("active");
+    const selectedTabPane = tabsContent.querySelector(
+      `[data-tab-panel="${tabName}"]`
+    );
+    selectedTabPane.classList.add("active");
+  }
+  const tabGroups = document.querySelectorAll("[data-tab-group]");
+  tabGroups.forEach((tabGroup) => {
+    const tabsNav = tabGroup.querySelector("[data-tab-nav]");
+    const tabsNavItem = tabsNav.querySelectorAll("[data-tab]");
+    const activeTabName =
+      localStorage.getItem(`activeTabName-${tabGroup.dataset.tabGroup}`) ||
+      tabsNavItem[0].getAttribute("data-tab");
 
-  //   setActiveTab(tabGroup, activeTabName);
+    setActiveTab(tabGroup, activeTabName);
 
-  //   tabsNavItem.forEach((tabNavItem) => {
-  //     tabNavItem.addEventListener("click", () => {
-  //       const tabName = tabNavItem.dataset.tab;
-  //       setActiveTab(tabGroup, tabName);
-  //       localStorage.setItem(
-  //         `activeTabName-${tabGroup.dataset.tabGroup}`,
-  //         tabName
-  //       );
-  //     });
-  //   });
-  // });
+    tabsNavItem.forEach((tabNavItem) => {
+      tabNavItem.addEventListener("click", () => {
+        const tabName = tabNavItem.dataset.tab;
+        setActiveTab(tabGroup, tabName);
+        localStorage.setItem(
+          `activeTabName-${tabGroup.dataset.tabGroup}`,
+          tabName
+        );
+      });
+    });
+  });
 
   // // ########################## Accordion ##########################
   // const accordion = document.querySelectorAll("[data-accordion]");
