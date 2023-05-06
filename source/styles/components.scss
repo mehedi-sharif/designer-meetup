@@ -143,6 +143,10 @@
 //scroll-marquee
 .scroll-marquee {
   @apply overflow-hidden;
+
+  .scroll-item {
+    @apply leading-tight;
+  }
 }
 
 //person
