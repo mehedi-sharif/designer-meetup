@@ -119,6 +119,15 @@
   })
 
 
+  //add navigation active state
+  document.querySelectorAll('.nav-link').forEach((link, index, arr) => {
+    link.addEventListener('click', () => {
+      arr.forEach(item => item.classList.remove('active'));
+      link.classList.add('active')
+    })
+  })
+
+
   // // ########################## Tab ##########################
   function setActiveTab(tabGroup, tabName, tabGroupName) {
     const tabsNav = tabGroup.querySelector(`[data-tab-group=${tabGroupName}] [data-tab-nav]`);
