@@ -89,7 +89,11 @@
       end: 'bottom bottom',
       scrub: 1,
       onUpdate: self => {
-        parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight / 1.1 * self.progress}px`
+        if(window.innerWidth >= 992) {
+          parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight / 1.1 * self.progress}px`
+        } else {
+          parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight /1.05 * self.progress}px`
+        }
       }
     }
   })
