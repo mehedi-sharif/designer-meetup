@@ -44,7 +44,6 @@
         return {ele: item, wrapperEl: wrapperElement, scrollX: item.scrollWidth - item.clientWidth, direction: index % 2 === 0 ? 1 : -1}
       }).forEach(marquee => {
         if(marquee.direction === -1 ) {
-          console.log(marquee)
           gsap.set(marquee.wrapperEl, {x: -marquee.scrollX})
           gsap.to(marquee.wrapperEl, {
             x: 0,
@@ -75,6 +74,24 @@
     window.addEventListener('resize', () => {
       initScrollMarquee()
     })
+  })
+
+  //parallax
+  const wrapper = document.querySelector('.wrapper');
+  const parallaxBg = document.querySelector('.parallax-bg');
+
+  gsap.to(parallaxBg, {
+    // yPercent: 100,
+    // backgroundPositionY: 90,
+    scrollTrigger: {
+      trigger: wrapper,
+      start: 'top 40%',
+      end: 'bottom bottom',
+      scrub: 1,
+      onUpdate: self => {
+        parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight / 1.1 * self.progress}px`
+      }
+    }
   })
 
 
