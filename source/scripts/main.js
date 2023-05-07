@@ -100,38 +100,40 @@
 
 
   // // ########################## Tab ##########################
-  function setActiveTab(tabGroup, tabName) {
-    const tabsNav = tabGroup.querySelector("[data-tab-nav]");
-    const tabsContent = tabGroup.querySelector("[data-tab-content]");
-
+  function setActiveTab(tabGroup, tabName, tabGroupName) {
+    const tabsNav = tabGroup.querySelector(`[data-tab-group=${tabGroupName}] [data-tab-nav]`);
+    const tabsContent = tabGroup.querySelector(`[data-tab-group=${tabGroupName}] [data-tab-content]`);
+    console.log(tabsNav)
     tabsNav.querySelectorAll("[data-tab]").forEach((tabNavItem) => {
       tabNavItem.classList.remove("active");
     });
-    tabsContent.querySelectorAll("[data-tab-panel]").forEach((tabPane) => {
+    tabsContent.querySelectorAll(`[data-tab-group=${tabGroupName}] > [data-tab-content] > [data-tab-panel]`).forEach((tabPane) => {
       tabPane.classList.remove("active");
     });
 
-    const selectedTabNavItem = tabsNav.querySelector(`[data-tab="${tabName}"]`);
+    const selectedTabNavItem = tabsNav.querySelector(`[data-tab-group=${tabGroupName}] [data-tab-nav] > [data-tab="${tabName}"]`);
     selectedTabNavItem.classList.add("active");
     const selectedTabPane = tabsContent.querySelector(
-      `[data-tab-panel="${tabName}"]`
+      `[data-tab-group=${tabGroupName}] > [data-tab-content] > [data-tab-panel="${tabName}"]`
     );
     selectedTabPane.classList.add("active");
   }
+
   const tabGroups = document.querySelectorAll("[data-tab-group]");
   tabGroups.forEach((tabGroup) => {
     const tabsNav = tabGroup.querySelector("[data-tab-nav]");
     const tabsNavItem = tabsNav.querySelectorAll("[data-tab]");
+    const tabGroupName = tabGroup.dataset.tabGroup;
     const activeTabName =
       localStorage.getItem(`activeTabName-${tabGroup.dataset.tabGroup}`) ||
       tabsNavItem[0].getAttribute("data-tab");
 
-    setActiveTab(tabGroup, activeTabName);
+    setActiveTab(tabGroup, activeTabName, tabGroupName);
 
     tabsNavItem.forEach((tabNavItem) => {
       tabNavItem.addEventListener("click", () => {
         const tabName = tabNavItem.dataset.tab;
-        setActiveTab(tabGroup, tabName);
+        setActiveTab(tabGroup, tabName, tabGroupName);
         localStorage.setItem(
           `activeTabName-${tabGroup.dataset.tabGroup}`,
           tabName

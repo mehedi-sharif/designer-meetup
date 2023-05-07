@@ -4,15 +4,15 @@ input#nav-toggle:checked ~ label#show-button {
 }
 
 input#nav-toggle:checked ~ label#hide-button {
-  @apply flex lg:hidden;
+  @apply flex xl:hidden;
 }
 
 input#nav-toggle:checked ~ #nav-menu {
-  @apply block lg:flex;
+  @apply block xl:flex;
 }
 
 .header {
-  @apply bg-body py-4 lg:py-10  px-4;
+  @apply bg-body py-4 xl:py-10  px-4;
 }
 
 // navbar items
@@ -29,18 +29,15 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .navbar-nav {
-  @apply text-center lg:text-left;
+  @apply text-center xl:text-left;
 }
 
-.nav-item {
-  // @apply mx-3;
-}
 
 .nav-link {
-  @apply block p-3 font-normal text-xs text-[#AAAAAA] transition  lg:px-2 lg:py-3;
+  @apply block p-3 font-normal text-[8px] lg:text-xs text-[#AAAAAA] transition  lg:px-2 lg:py-3;
 
   span {
-    @apply block text-sm xl:text-[16px] text-white leading-5 ;
+    @apply block text-sm lg:text-[xs] xl:text-[16px] text-white leading-5 ;
   }
 
   &:hover span {

@@ -192,6 +192,15 @@
 
 
 .explore-tab {
+  &-nav {
+    li {
+      @apply text-light cursor-pointer;
+    }
+
+    li.active {
+      @apply text-white;
+    }
+  }
   .tab-nav-item {
     @apply text-light whitespace-nowrap;
   }
