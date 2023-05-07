@@ -81,8 +81,6 @@
   const parallaxBg = document.querySelector('.parallax-bg');
 
   gsap.to(parallaxBg, {
-    // yPercent: 100,
-    // backgroundPositionY: 90,
     scrollTrigger: {
       trigger: wrapper,
       start: 'top 40%',
@@ -98,12 +96,33 @@
     }
   })
 
+  //filter-programs
+  const filterNavItems = document.querySelectorAll('.filter-nav li');
+  const allPrograms = document.querySelector('.all-programs');
+
+  const shuffleInstance = new Shuffle(allPrograms, {
+    itemSelector: '.program',
+  });
+
+  filterNavItems.forEach((item) => {
+    item.addEventListener('click', function(){
+      const group = this.dataset.group;
+      filterNavItems.forEach(item => item.classList.remove('active'));
+      item.classList.add('active')
+      if (group === "all") {
+        shuffleInstance.filter();
+        return;
+      }
+      shuffleInstance.filter(group)
+      
+    })
+  })
+
 
   // // ########################## Tab ##########################
   function setActiveTab(tabGroup, tabName, tabGroupName) {
     const tabsNav = tabGroup.querySelector(`[data-tab-group=${tabGroupName}] [data-tab-nav]`);
     const tabsContent = tabGroup.querySelector(`[data-tab-group=${tabGroupName}] [data-tab-content]`);
-    console.log(tabsNav)
     tabsNav.querySelectorAll("[data-tab]").forEach((tabNavItem) => {
       tabNavItem.classList.remove("active");
     });
