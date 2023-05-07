@@ -18,6 +18,7 @@
   });
 
   //sponsors carousel
+ if(window.innerWidth>= 768) {
   new Swiper(".sponsor-carousel", {
     loop: true,
     slidesPerView: 3,
@@ -33,6 +34,7 @@
       },
     },
   });
+ }
 
 
   //scroll marquee 
@@ -73,7 +75,6 @@
     initScrollMarquee()
     window.addEventListener('resize', () => {
       initScrollMarquee()
-
     })
 
     function getCoords(elem) { // crossbrowser version
@@ -118,45 +119,15 @@
 
   //parallax
   const wrapper = document.querySelector('.wrapper');
-  const parallaxBg = document.querySelector('.parallax-bg');
   const parallaxVideo = document.querySelector('.parallax-video');
 
-  // gsap.to(parallaxBg, {
-  //   scrollTrigger: {
-  //     trigger: wrapper,
-  //     start: 'top 40%',
-  //     end: 'bottom bottom',
-  //     scrub: 1,
-  //     onUpdate: self => {
-  //       if(window.innerWidth >= 992) {
-  //         parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight / 1.1 * self.progress}px`
-  //       } else {
-  //         parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight /1.05 * self.progress}px`
-  //       }
-  //     }
-  //   }
-  // })
-
   gsap.to(parallaxVideo, {
-    // y: wrapper.clientHeight * 0.8,
     scrollTrigger: {
       trigger: wrapper,
-      start: 'top 40%',
+      start: 'top 30%',
       end: 'bottom bottom',
       scrub: 1,
-      onUpdate: self => {
-        if(window.innerWidth >= 992) {
-          gsap.to(parallaxVideo, {
-            y: () => wrapper.clientHeight / 1.1 * self.progress,
-            duration: .2
-          })
-        } else {
-          gsap.to(parallaxVideo, {
-            y: () => wrapper.clientHeight / 1.05 * self.progress,
-            duration: .2
-          })
-        }
-      }
+      pin: parallaxVideo
     }
   })
 
@@ -228,48 +199,4 @@
     });
   });
 
-  // // ########################## Accordion ##########################
-  // const accordion = document.querySelectorAll("[data-accordion]");
-  // accordion.forEach((header) => {
-  //   header.addEventListener("click", () => {
-  //     const accordionItem = header.parentElement;
-  //     accordionItem.classList.toggle("active");
-  //   });
-  // });
-
-  // // ########################## Modal ##############################
-  // const openModalButtons = document.querySelectorAll("[data-modal-open]");
-  // const closeModalButtons = document.querySelectorAll("[data-modal-close]");
-
-  // function openModal(modal) {
-  //   if (modal === null) {
-  //     return null;
-  //   }
-  //   const overlay = modal.querySelector("[data-modal-overlay]");
-  //   modal.style.display = "block";
-  //   overlay.style.display = "block";
-  // }
-
-  // function closeModal(modal) {
-  //   if (modal === null) {
-  //     return null;
-  //   }
-  //   const overlay = modal.querySelector("[data-modal-overlay]");
-  //   modal.style.display = "none";
-  //   overlay.style.display = "none";
-  // }
-
-  // openModalButtons.forEach((button) => {
-  //   button.addEventListener("click", () => {
-  //     const modal = button.nextElementSibling;
-  //     openModal(modal);
-  //   });
-  // });
-
-  // closeModalButtons.forEach((button) => {
-  //   button.addEventListener("click", () => {
-  //     const modal = button.closest("[data-modal]");
-  //     closeModal(modal);
-  //   });
-  // });
 })();

@@ -1,18 +1,23 @@
 <!-- Hero -->
 <section class="hero relative overflow-hidden">
-    <div class="container pt-10 pb-20 lg:pb-24">
-        <div class="flex items-center mb-6">
-            <img src="images/sound-icon.svg" alt="">
-            <ul class="pl-8 lg:pl-6 md:flex flex-wrap items-center">
-                <li class="mr-8 before:content-[''] before:md:hidden before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-2.5 before:bg-white relative">28 Jul ‘23</li>
-                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-2.5 before:bg-white relative">Barishal</li>
-                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-2.5 before:bg-white relative">300 Seats</li>
-                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-2.5 before:bg-white relative">Registrations Starting Soon...</li>
+    <div class="container pt-10 pb-20 lg:pb-24 flex lg:block flex-col">
+        <div class="flex items-center mb-6 order-1 justify-center lg:justify-start">
+            <img class="hidden lg:block" src="images/sound-icon.svg" alt="">
+            <ul class="pl-8 lg:pl-6 flex flex-wrap items-center justify-center lg:justify-start">
+                <li class="mr-8 before:content-[''] before:hidden before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5 before:lg:top-2.5 before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">28 Jul ‘23</li>
+                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5 lg:before:top-2.5 before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">Barishal</li>
+                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5 lg:before:top-2.5 before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">300 Seats</li>
+                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5 lg:before:top-2.5 before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">Registrations Starting Soon...</li>
             </ul>
         </div>
-        <img src="images/hero-text.svg" alt="">
+        <img class="lg:block hidden" src="images/hero-text.svg" alt="">
+        <img class="lg:hidden" src="images/hero-text-mb.svg" alt="">
+        <div class="flex justify-center items-center my-6">
+            <h4 class="text-[10px] lg:text-2xl xl:text-[32px] font-primary lg:mb-6 whitespace-nowrap mr-4">Powered by</h4>
+            <img class="inline-block w-24" src="images/title-sponsor.svg" alt="">
+        </div>
     </div>
-    <div class="marquee bg-dark rotate-3 py-3 lg:py-5 absolute left-0 w-full bottom-10 px-4">
+    <div class="marquee bg-dark rotate-3 py-3 lg:py-5 absolute left-0 w-full bottom-4 lg:bottom-10 px-4">
         <div class="marquee-wrapper">
             <div class="marquee-item flex items-center">
                 <h4 class="lg:text-[38px] font-secondary text-[#FF1B82]">sponsors wanted</h4>
@@ -60,11 +65,11 @@
     </div>
     
     <!-- Intro -->
-    <section class="pb-20 relative" id="intro">
+    <section class="mb-20 relative" id="intro">
         <div class="container mb-10">
             <p class="mb-4  font-medium">We will place platinum sponsor’s logo here</p>
             <div class="swiper sponsor-carousel mb-[70px]">
-                <div class="swiper-wrapper items-center">
+                <div class="swiper-wrapper items-center grid md:flex grid-cols-2 gap-6 justify-between md:gap-0 md:justify-start">
                     <div class="swiper-slide">
                         <img src="images/sponsors/sponsor-1.svg" alt="">
                     </div>
@@ -86,10 +91,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="lg:col-8 mb-6 lg:mb-0">
+                <div class="lg:col-8 mb-4 lg:mb-0">
                     <div class="h-full bg-gradient-to-r from-[#292731] to-[#201F24] rounded-2xl p-6 lg:p-8">
-                        <div class="flex mb-6">
-                            <div class="mr-6 lg:mr-16">
+                        <div class="flex flex-wrap mb-8 justify-between md:justify-start">
+                            <div class="flex-[0_0_100%] sm:flex-none mb-8 md:mb-0 md:mr-6 lg:mr-16 text-center sm:text-start">
                                 <span class="text-[#aaaaaa]">Event on</span>
                                 <h4>28 July, 2023</h4>
                             </div>
@@ -102,12 +107,14 @@
                                 <h4>300 Only</h4>
                             </div>
                         </div>
-                        <span class="text-[#aaaaaa]">Registrations</span>
-                        <h3 class="">Starting soon</h3>
+                        <div class="text-center sm:text-start">
+                            <span class="text-[#aaaaaa]">Registrations</span>
+                            <h3 class="">Starting soon</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="lg:col-4">
-                    <div class="bg-white rounded-2xl p-6 relative mb-6 overflow-hidden">
+                    <div class="bg-white rounded-2xl p-6 relative mb-4 md:mb-6 overflow-hidden">
                         <span class="text-primary">Become a</span>
                         <h4 class="text-dark">Sponsor</h4>
                         <a class="stretch-link float-right w-8 h-8 -mt-6 -mr-2 inline-flex items-center justify-center" href="#">
@@ -131,16 +138,16 @@
         <div class="marquee  mb-10 lg:mb-20">
             <div class="marquee-wrapper">
                 <div class="marquee-slide">
-                    <p class="scroll-item mr-10 text-[164px] leading-none text-white font-secondary whitespace-nowrap">designers / portfolio Review </p>
+                    <p class="scroll-item text-white">designers / portfolio Review </p>
                 </div>
                 <div class="marquee-slide">
-                    <p class="scroll-item mr-10 text-[164px] leading-none text-white font-secondary whitespace-nowrap">designers / portfolio Review </p>
+                    <p class="scroll-item text-white">designers / portfolio Review </p>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="bg-[#201F24] rounded-2xl p-6 lg:p-16">
-                <div class="row">
+                <div class="row text-center md:text-start">
                     <div class="md:col-4 mb-6 lg:mb-0">
                         <h2 class="h4">প্রাচ্যের ভেনিস বরিশালে <br> আপনাকে স্বাগতম। </h2>
                     </div>
@@ -155,7 +162,7 @@
     
     
     <!-- Speakers -->
-    <section class="mb-20" id="speakers">
+    <section class="my-20" id="speakers">
         <div class="container">
             <div class="row">
                 <div class="lg:col-4 mb-10 lg:mb-0 text-center md:text-start">
@@ -242,149 +249,149 @@
                 </div>
             </div>
             <div class="row">
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-1.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Mamun
                                 Srizon</h4>
-                            <p class="mb-4">Design System Manager,</p>
-                            <p class="text-primary">Upwork</p>
+                            <p class="mb-1 text-sm md:text-base">Design System Manager,</p>
+                            <p class="text-sm md:text-base text-primary">Upwork</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-2.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Ahmad
                                 Firoz</h4>
-                            <p class="mb-4">Senior Product Designer,</p>
-                            <p class="text-primary">Goava</p>
+                            <p class="mb-1 text-sm md:text-base">Senior Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Goava</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-3.png" alt="">
-                        <div class="person-info">
-                            <h4 class="mb-2">Khalid Hasan Zibon</h4>
-                            <p class="mb-4">Lead Product Designer,</p>
-                            <p class="text-primary">Intelligent Machines Limited</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-4.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Shamsuddin Chowdhury</h4>
-                            <p class="mb-4">Head of Design,</p>
-                            <p class="text-primary">Shifl Inc</p>
+                            <p class="mb-1 text-sm md:text-base">Head of Design,</p>
+                            <p class="text-sm md:text-base text-primary">Shifl Inc</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-5.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Atiqur
                                 Rahaman</h4>
-                            <p class="mb-4">UX Lead,</p>
-                            <p class="text-primary">Tutubi</p>
+                            <p class="mb-1 text-sm md:text-base">UX Lead,</p>
+                            <p class="text-sm md:text-base text-primary">Tutubi</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-6.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Shoaib Mahmud</h4>
-                            <p class="mb-4">Product Designer,</p>
-                            <p class="text-primary">Toptal</p>
+                            <p class="mb-1 text-sm md:text-base">Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Toptal</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-7.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Sashoto Seeam</h4>
-                            <p class="mb-4">Principal Designer,</p>
-                            <p class="text-primary">LifeData</p>
+                            <p class="mb-1 text-sm md:text-base">Principal Designer,</p>
+                            <p class="text-sm md:text-base text-primary">LifeData</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-8.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Nasir
                                 Uddin</h4>
-                            <p class="mb-4">CEO,</p>
-                            <p class="text-primary">Nurency Digital</p>
+                            <p class="mb-1 text-sm md:text-base">CEO,</p>
+                            <p class="text-sm md:text-base text-primary">Nurency Digital</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-9.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Eftakher Alam Siblu</h4>
-                            <p class="mb-4">Lead Product Designer,</p>
-                            <p class="text-primary">UBIX Labs</p>
+                            <p class="mb-1 text-sm md:text-base">Lead Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">UBIX Labs</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-10.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Imran Khan Limon</h4>
-                            <p class="mb-4">Head of Design,</p>
-                            <p class="text-primary">Day Translations, Inc</p>
+                            <p class="mb-1 text-sm md:text-base">Head of Design,</p>
+                            <p class="text-sm md:text-base text-primary">Day Translations, Inc</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-11.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Shahadat Rahman</h4>
-                            <p class="mb-4">Ekhane position,</p>
-                            <p class="text-primary">Compnay</p>
+                            <p class="mb-1 text-sm md:text-base">Ekhane position,</p>
+                            <p class="text-sm md:text-base text-primary">Compnay</p>
                         </div>
                     </div>
                 </div>
-                <div class="sm:col-6 xl:col-4">
-                    <div class="person mb-[60px]">
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
                         <img class="person-img" src="images/guests/guest-12.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Ahmed Hasan</h4>
-                            <p class="mb-4">Lead Product Designer,</p>
-                            <p class="text-primary">Zelf Inc. </p>
+                            <p class="mb-1 text-sm md:text-base">Lead Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Zelf Inc. </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="marquee  mb-10 lg:mb-20">
-            <div class="marquee-wrapper">
-                <div class="marquee-slide">
-                    <p class="scroll-item mr-10 text-[164px] leading-none text-[#29272E] font-secondary whitespace-nowrap">designers / portfolio Review </p>
-                </div>
-                <div class="marquee-slide">
-                    <p class="scroll-item mr-10 text-[164px] leading-none text-[#29272E] font-secondary whitespace-nowrap">designers / portfolio Review </p>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/guest-3.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Khalid Hasan Zibon</h4>
+                            <p class="mb-1 text-sm md:text-base">Lead Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Intelligent Machines Limited</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <div class="marquee  mb-10 lg:mb-20">
+        <div class="marquee-wrapper">
+            <div class="marquee-slide">
+                <p class="scroll-item text-[#29272E]">designers / portfolio Review </p>
+            </div>
+            <div class="marquee-slide">
+                <p class="scroll-item text-[#29272E]">designers / portfolio Review </p>
+            </div>
+        </div>
+    </div>
     <!-- end Guest -->
     
     
     <!-- Schedule -->
-    <section class="mb-20 overflow-hidden" id="schedule">
-        <div class="container">
+    <section class="mt-20 overflow-hidden" id="schedule">
+        <div class="container mb-10 lg:mb-20">
             <div class="mb-16">
                 <div class="row items-center mb-8 lg:mb-16">
                     <div class="lg:col-6 mb-6 lg:mb-0 text-center lg:text-start">
@@ -520,21 +527,21 @@
                 </a>
             </div>
         </div>
+        <div class="marquee">
+            <div class="marquee-wrapper">
+                <div class="marquee-slide">
+                    <p class="scroll-item text-[#29272E]">designers / portfolio Review </p>
+                </div>
+                <div class="marquee-slide">
+                    <p class="scroll-item text-[#29272E]">designers / portfolio Review </p>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- end Schedule -->
     
     <!-- sponsorship -->
-    <section class="pb-20 overflow-hidden bg-body" id="sponsorship">
-        <div class="marquee  mb-10 lg:mb-20">
-            <div class="marquee-wrapper">
-                <div class="marquee-slide">
-                    <p class="scroll-item mr-10 text-[164px] leading-none text-[#29272E] font-secondary whitespace-nowrap">designers / portfolio Review </p>
-                </div>
-                <div class="marquee-slide">
-                    <p class="scroll-item mr-10 text-[164px] leading-none text-[#29272E] font-secondary whitespace-nowrap">designers / portfolio Review </p>
-                </div>
-            </div>
-        </div>
+    <section class="py-20 overflow-hidden bg-body" id="sponsorship">
         <div class="container">
             <div class="text-center mb-16">
                 <p class="text-[#aaaaaa]">Meet our</p>
@@ -544,7 +551,7 @@
                 </h2>
             </div>
             <div class="row">
-                <div class="md:col-6 lg:col-4 mb-16">
+                <div class="md:col-6 lg:col-4 mb-6">
                     <div class="card bg-gradient-to-tr from-[#CEF23B] to-[#FF1B82]">
                         <div class="card-body">
                             <img class="card-icon" src="images/card-icon-1.png" alt="">
@@ -565,7 +572,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="md:col-6 lg:col-4 mb-16">
+                <div class="md:col-6 lg:col-4 mb-6">
                     <div class="card bg-primary">
                         <div class="card-body">
                             <img class="card-icon" src="images/card-icon-2.png" alt="">
@@ -585,7 +592,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="md:col-6 lg:col-4 mb-16">
+                <div class="md:col-6 lg:col-4 mb-6">
                     <div class="card bg-white">
                         <div class="card-body">
                             <img class="card-icon" src="images/card-icon-3.png" alt="">
@@ -603,7 +610,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center">
+            <div class="text-center mt-12">
                 <a class="btn btn-primary" href="#">
                     <svg width="41" height="32" viewBox="0 0 41 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.5" width="40" height="32" rx="16" fill="#CE2471" fill-opacity="0.2" />
@@ -624,7 +631,7 @@
     <!-- end sponsorship -->
     
     <!-- sponsors -->
-    <section id="sponsor">
+    <section class="pt-20" id="sponsor">
         <div class="container">
             <div class="relative mb-8 lg:mb-16">
                 <div class="row items-center">
@@ -646,16 +653,16 @@
                         <p class="text-white/80">of knowledge sharing, get together, portfolio reviews, food, enjoy!</p>
                     </div>
                 </div>
-                <div class="md:col-3">
+                <div class="col-6 md:col-3">
                     <div class="border-t border-white/30 py-4">
                         <div class="count text-2xl lg:text-4xl">300+</div>
-                        <p class="text-white/80">participants</p>
+                        <p class="text-[16px] md:text-base text-white/80">participants</p>
                     </div>
                 </div>
-                <div class="md:col-3">
+                <div class="col-6 md:col-3">
                     <div class="border-t border-white/30 py-4">
                         <div class="count text-2xl lg:text-4xl">20+</div>
-                        <p class="text-white/80">speakers & guests</p>
+                        <p class="text-[16px] md:text-base text-white/80">speakers & guests</p>
                     </div>
                 </div>
             </div>
@@ -693,10 +700,10 @@
                     <div class="lg:col-3 mb-6 lg:mb-0">
                         <p class="text-2xl lg:text-[2rem]">Co-Sponsors</p>
                     </div>
-                    <div class="lg:col-9 flex items-center flex-wrap  lg:justify-end">
-                        <img class="my-6 mr-6 md:mr-16" src="images/sponsors/co-sponsor-1.svg" alt="">
-                        <img class="my-6 mr-6 md:mr-16" src="images/sponsors/co-sponsor-2.svg" alt="">
-                        <img class="my-6 mr-6 md:mr-16" src="images/sponsors/co-sponsor-3.svg" alt="">
+                    <div class="lg:col-9 flex items-center flex-wrap  lg:justify-end -mt-6">
+                        <img class="my-6 mr-4 md:mr-16" src="images/sponsors/co-sponsor-1.svg" alt="">
+                        <img class="my-6 mr-4 md:mr-16" src="images/sponsors/co-sponsor-2.svg" alt="">
+                        <img class="my-6 mr-4 md:mr-16" src="images/sponsors/co-sponsor-3.svg" alt="">
                         <img src="images/sponsors/co-sponsor-4.svg" alt="">
                     </div>
                 </div>

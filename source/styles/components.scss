@@ -8,7 +8,7 @@
 
 // container
 .container {
-  @apply mx-auto max-w-[1240px] 2xl:max-w-[1650px] px-4;
+  @apply mx-auto max-w-[1240px] px-4;
 }
 
 // form style
@@ -110,26 +110,26 @@
 }
 
 
-//register-cta
-.register-cta {
-  @apply bg-white text-dark rounded-lg font-bold py-2.5 text-xl inline-flex items-center px-4 relative overflow-hidden;
+// //register-cta
+// .register-cta {
+//   @apply bg-white text-dark rounded-lg font-bold py-2.5 text-xl inline-flex items-center px-4 relative overflow-hidden;
   
-  svg {
-    @apply mr-2.5;
-  }
+//   svg {
+//     @apply mr-2.5;
+//   }
 
-  &::after, &::before {
-    @apply content-[''] w-4 h-4 rounded-full bg-body absolute top-1/2 -translate-y-1/2;
-  }
+//   &::after, &::before {
+//     @apply content-[''] w-4 h-4 rounded-full bg-body absolute top-1/2 -translate-y-1/2;
+//   }
 
-  &::before {
-    @apply -left-2;
-  }
+//   &::before {
+//     @apply -left-2;
+//   }
 
-  &::after {
-    @apply -right-2;
-  }
-}
+//   &::after {
+//     @apply -right-2;
+//   }
+// }
 
 // marquee
 .marquee {
@@ -138,14 +138,9 @@
   &-wrapper {
     @apply flex items-center space-x-6;
   }
-}
-
-//scroll-marquee
-.scroll-marquee {
-  @apply overflow-hidden;
 
   .scroll-item {
-    @apply leading-none;
+    @apply uppercase  mr-10 text-[64px] lg:text-[80px] xl:text-[164px] leading-none font-secondary whitespace-nowrap;
   }
 }
 

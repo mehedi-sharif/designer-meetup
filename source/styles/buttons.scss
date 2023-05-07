@@ -25,9 +25,14 @@
 
 //register-btn
 .register-cta {
-  @apply border-0 h-[52px];
+  @apply border-0 h-[52px] inline-flex items-center p-0;
+
   svg {
-    @apply hidden lg:block;
+    @apply mr-2.5;
+  }
+
+  &.disabled {
+    @apply cursor-not-allowed opacity-50;
   }
 }
 
