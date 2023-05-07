@@ -119,8 +119,26 @@
   //parallax
   const wrapper = document.querySelector('.wrapper');
   const parallaxBg = document.querySelector('.parallax-bg');
+  const parallaxVideo = document.querySelector('.parallax-video');
 
-  gsap.to(parallaxBg, {
+  // gsap.to(parallaxBg, {
+  //   scrollTrigger: {
+  //     trigger: wrapper,
+  //     start: 'top 40%',
+  //     end: 'bottom bottom',
+  //     scrub: 1,
+  //     onUpdate: self => {
+  //       if(window.innerWidth >= 992) {
+  //         parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight / 1.1 * self.progress}px`
+  //       } else {
+  //         parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight /1.05 * self.progress}px`
+  //       }
+  //     }
+  //   }
+  // })
+
+  gsap.to(parallaxVideo, {
+    // y: wrapper.clientHeight * 0.8,
     scrollTrigger: {
       trigger: wrapper,
       start: 'top 40%',
@@ -128,9 +146,15 @@
       scrub: 1,
       onUpdate: self => {
         if(window.innerWidth >= 992) {
-          parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight / 1.1 * self.progress}px`
+          gsap.to(parallaxVideo, {
+            y: () => wrapper.clientHeight / 1.1 * self.progress,
+            duration: .2
+          })
         } else {
-          parallaxBg.style.backgroundPositionY = `${wrapper.clientHeight /1.05 * self.progress}px`
+          gsap.to(parallaxVideo, {
+            y: () => wrapper.clientHeight / 1.05 * self.progress,
+            duration: .2
+          })
         }
       }
     }

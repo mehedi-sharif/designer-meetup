@@ -52,7 +52,12 @@
 <!-- end hero -->
 
 <div class="wrapper relative pb-20">
-    <div class="parallax-bg absolute lg:top-[-120px] left-0 w-full h-full -z-[1] bg-[url('../images/texture.png')] bg-no-repeat bg-[length:100%_700px] lg:bg-[length:100%_auto]"></div>
+    <!-- <div class="parallax-bg absolute lg:top-[-120px] left-0 w-full h-full -z-[1] bg-[url('../images/texture.png')] bg-no-repeat bg-[length:100%_700px] lg:bg-[length:100%_auto]"></div> -->
+    <div class="parallax-bg absolute lg:top-[-120px] left-0 w-full h-full -z-[1]">
+        <video width="250" autoplay muted loop class="w-full parallax-video">
+            <source src="images/bg-wave.webm" type="video/webm">
+        </video>
+    </div>
     
     <!-- Intro -->
     <section class="pb-20 relative" id="intro">
@@ -702,7 +707,7 @@
 </div>
 
 <!-- explore -->
-<section class="mb-20 overflow-hidden" id="explore">
+<section class="mb-20 overflow-hidden bg-body" id="explore">
     <div class="container tab border-0" data-tab-group="explore-tab">
         <div class="row items-center mb-8 lg:mb-16">
             <div class="col-12 text-center lg:text-start">
@@ -721,7 +726,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row items-center" data-tab-content>
+        <div data-tab-content>
             <div class="tab-content-panel p-0 active" data-tab-panel="0">
                 <div class="col-12 explore-tab tab border-0" data-tab-group="explore-tab-inner-1">
                     <ul class="tab-nav flex items-center flex-nowrap overflow-auto mb-10" data-tab-nav>
