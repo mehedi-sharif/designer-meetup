@@ -73,6 +73,46 @@
     initScrollMarquee()
     window.addEventListener('resize', () => {
       initScrollMarquee()
+
+    })
+
+    function getCoords(elem) { // crossbrowser version
+      var box = elem.getBoundingClientRect();
+  
+      var body = document.body;
+      var docEl = document.documentElement;
+  
+      var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+      var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+  
+      var clientTop = docEl.clientTop || body.clientTop || 0;
+      var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+  
+      var top  = box.top +  scrollTop - clientTop;
+      var left = box.left + scrollLeft - clientLeft;
+  
+      return { top: Math.round(top), left: Math.round(left) };
+  }
+     //add navigation active state
+    document.querySelectorAll('.nav-link').forEach((link, index, arr) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        arr.forEach(item => item.classList.remove('active'));
+        link.classList.add('active')
+        const href = e.currentTarget.getAttribute('href');
+        const section = document.getElementById(href.replace('#', ''));
+        if(!section) return;
+        if(href.match(/^#/)) {
+          const position = getCoords(section);
+          window.scrollTo({
+            top: position.top - document.querySelector('.header').clientHeight,
+            behavior: 'smooth'
+          })
+
+          document.querySelector('#nav-toggle').checked = false
+        }
+       
+      })
     })
   })
 
@@ -119,13 +159,7 @@
   })
 
 
-  //add navigation active state
-  document.querySelectorAll('.nav-link').forEach((link, index, arr) => {
-    link.addEventListener('click', () => {
-      arr.forEach(item => item.classList.remove('active'));
-      link.classList.add('active')
-    })
-  })
+ 
 
 
   // // ########################## Tab ##########################
