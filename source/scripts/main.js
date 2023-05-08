@@ -5,6 +5,12 @@
   // window.addEventListener("load", (e) => {
   //   document.querySelector(".preloader").style.display = "none";
   // });
+  //close menu
+  document.getElementById('menu-close').addEventListener('click', () => {
+    document.getElementById('nav-toggle').checked = false;
+  })
+
+
   //inti marquees
   const marquees = document.querySelectorAll(".marquee");
   [...marquees].forEach((marquee) => {
@@ -33,6 +39,15 @@
         spaceBetween: 70,
       },
     },
+  });
+ }
+
+
+ if(window.innerWidth <= 991.98) {
+  new Swiper(".gallery-carousel", {
+    loop: true,
+    slidesPerView: 1.2,
+    spaceBetween: 24,
   });
  }
 

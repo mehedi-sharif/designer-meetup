@@ -62,9 +62,6 @@
   &-content {
     &-panel {
       @apply hidden p-8;
-      p {
-        @apply mb-0;
-      }
       &.active {
         @apply block;
       }
