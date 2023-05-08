@@ -125,7 +125,7 @@
     scrollTrigger: {
       trigger: wrapper,
       start: 'top 30%',
-      end: 'bottom bottom',
+      end: 'bottom center',
       scrub: 1,
       pin: parallaxVideo
     }
