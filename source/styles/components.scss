@@ -1,0 +1,232 @@
+// section style
+.section {
+  @apply py-24 xl:py-28;
+  &-sm {
+    @apply py-16 xl:py-20;
+  }
+}
+
+// container
+.container {
+  @apply mx-auto max-w-[1240px] px-4;
+}
+
+// form style
+.form-input {
+  @apply w-full rounded border-transparent  px-6 py-4 text-dark placeholder:text-light focus:border-primary focus:ring-transparent ;
+}
+
+.form-label {
+  @apply mb-4 block font-secondary text-xl font-normal text-dark ;
+}
+
+// social icons
+.social-icons {
+  @apply space-x-4;
+  li {
+    @apply inline-block;
+    a {
+      @apply flex h-9 w-9 items-center justify-center rounded bg-primary text-center leading-9 text-white  ;
+      svg {
+        @apply h-5 w-5;
+      }
+    }
+  }
+}
+
+
+// swiper pagination
+.swiper-pagination-bullet {
+  @apply h-2.5 w-2.5  opacity-100 ;
+
+  &-active {
+    @apply h-4 w-4 bg-primary ;
+  }
+}
+
+// tab
+.tab {
+  @apply overflow-hidden rounded-lg border border-border ;
+
+  &-nav {
+    @apply flex border-b border-border   ;
+
+    &-item {
+      @apply cursor-pointer border-b-[3px] border-border py-2  text-dark opacity-80 ;
+
+      &.active {
+        @apply border-b-[3px] border-dark opacity-100 ;
+      }
+    }
+  }
+  &-content {
+    &-panel {
+      @apply hidden p-8;
+      &.active {
+        @apply block;
+      }
+    }
+  }
+}
+
+
+// accordion
+.accordion {
+  @apply mb-6 overflow-hidden rounded-lg border border-border   ;
+  &-header {
+    @apply flex cursor-pointer items-center justify-between px-8 py-4  text-dark;
+  }
+  &-icon {
+    @apply h-[.8em] w-[.8em] rotate-[-90deg] transition-transform duration-200;
+  }
+  &-content {
+    @apply max-h-0 overflow-hidden px-8 py-0;
+  }
+  &.active {
+    .accordion-icon {
+      @apply rotate-0;
+    }
+    .accordion-content {
+      @apply max-h-screen;
+    }
+  }
+}
+
+// modal
+.modal {
+  @apply fixed inset-0 z-40 hidden h-full w-full overflow-auto;
+  &-overlay {
+    @apply fixed inset-0 z-40 hidden h-full w-full bg-black bg-opacity-40;
+  }
+  &-content {
+    @apply relative top-1/2 z-50 mx-auto max-w-[90%] -translate-y-1/2 rounded-lg bg-body p-8 ;
+  }
+  &-close {
+    @apply absolute right-3 top-3 h-8 w-8 rounded-full  text-center leading-8 text-dark  ;
+  }
+}
+
+
+// //register-cta
+// .register-cta {
+//   @apply bg-white text-dark rounded-lg font-bold py-2.5 text-xl inline-flex items-center px-4 relative overflow-hidden;
+  
+//   svg {
+//     @apply mr-2.5;
+//   }
+
+//   &::after, &::before {
+//     @apply content-[''] w-4 h-4 rounded-full bg-body absolute top-1/2 -translate-y-1/2;
+//   }
+
+//   &::before {
+//     @apply -left-2;
+//   }
+
+//   &::after {
+//     @apply -right-2;
+//   }
+// }
+
+// marquee
+.marquee {
+  @apply overflow-hidden;
+
+  &-wrapper {
+    @apply flex items-center space-x-6;
+  }
+
+  .scroll-item {
+    @apply uppercase  mr-10 text-[64px] lg:text-[80px] xl:text-[164px] leading-none font-secondary whitespace-nowrap;
+  }
+}
+
+//person
+.person {
+  @apply md:flex items-center justify-center md:justify-start text-center md:text-start;
+
+  &-img {
+    @apply mx-auto w-[120px] h-[120px] xl:w-[170px] xl:h-[170px] rounded-full md:mx-0 mb-6 md:mb-0;
+  }
+
+  &-info {
+    @apply md:ml-6;
+  }
+}
+
+//card
+.card {
+  @apply  h-full rounded-2xl flex;
+
+  &-icon {
+    @apply mx-auto mb-6 lg:mb-12;
+  }
+
+  &-body {
+    @apply p-6 lg:p-8 rounded-[inherit] m-[1px] bg-body flex-1;
+
+    h3 {
+      @apply lg:mb-12 mb-6 lg:pb-12 pb-6 border-b border-[#4B4755];
+    }
+
+    ol > li {
+      @apply mb-4 ;
+    }
+  }
+}
+
+.platinum-sponsors {
+  @apply grid grid-cols-2 sm:grid-cols-3 gap-x-14 gap-y-8 items-center lg:gap-y-16 text-end;
+  img {
+    @apply inline-block w-full h-[70px] object-contain;
+  }
+}
+
+
+.explore-tab {
+  &-nav {
+    li {
+      @apply text-light cursor-pointer;
+    }
+
+    li.active {
+      @apply text-white;
+    }
+  }
+  .tab-nav-item {
+    @apply text-light whitespace-nowrap;
+  }
+
+  .tab-nav-item.active {
+    @apply border-0 text-white;
+
+    span {
+      @apply text-secondary;
+    }
+  }
+}
+
+.parallax-bg {
+  transition: background-position 0.3s cubic-bezier(0.1, 0.73, 0.32, 0.89)
+}
+
+.filter-nav {
+  & > li.active {
+    @apply text-white;
+  }
+
+  & > li {
+    @apply text-light;
+  }
+}
+
+.program {
+  display: block;
+  position: initial !important;
+  width: 100%;
+  transform: none !important;
+
+  &.shuffle-item--hidden {
+    @apply hidden;
+  }
+}
