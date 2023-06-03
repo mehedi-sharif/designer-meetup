@@ -186,7 +186,7 @@
 .explore-tab {
   &-nav {
     li {
-      @apply text-light cursor-pointer;
+      @apply text-light;
     }
 
     li.active {
@@ -228,5 +228,14 @@
 
   &.shuffle-item--hidden {
     @apply hidden;
+  }
+}
+
+
+#custom-cursor {
+  @apply fixed top-0 left-0 z-[10] w-[150px] transition-all ease-out duration-300 pointer-events-none hidden lg:block;
+
+  img {
+    @apply absolute left-10
   }
 }
