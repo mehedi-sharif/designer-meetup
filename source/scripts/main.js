@@ -141,7 +141,7 @@
   const wrapper = document.querySelector(".wrapper");
   const parallaxVideo = document.querySelector(".parallax-video");
 
-  const topPos = window.innerWidth > 992 ? "top top" : "top 30%";
+  const topPos = window.innerWidth > 992 ? "top 20%" : "top 30%";
 
   gsap.to(parallaxVideo, {
     scrollTrigger: {
