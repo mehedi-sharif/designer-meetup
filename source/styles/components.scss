@@ -186,7 +186,7 @@
 .explore-tab {
   &-nav {
     li {
-      @apply text-light cursor-pointer;
+      @apply text-[#8b8b8c] cursor-pointer;
     }
 
     li.active {
@@ -194,7 +194,7 @@
     }
   }
   .tab-nav-item {
-    @apply text-light whitespace-nowrap;
+    @apply text-[#8b8b8c] whitespace-nowrap;
   }
 
   .tab-nav-item.active {
@@ -216,7 +216,7 @@
   }
 
   & > li {
-    @apply text-light;
+    @apply text-[#8b8b8c] cursor-pointer;
   }
 }
 
@@ -229,4 +229,22 @@
   &.shuffle-item--hidden {
     @apply hidden;
   }
+}
+
+
+#custom-cursor {
+  @apply fixed top-0 left-0 z-[100] transition-all ease-out duration-100 pointer-events-none hidden lg:block;
+
+  .cursor-svg {
+    @apply absolute top-0 left-0
+  }
+}
+
+
+.gradient-text {
+  background-image: linear-gradient(180deg, #FF9500 0%, #FF635D 71.35%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

@@ -2,12 +2,15 @@
 <section class="hero relative overflow-hidden">
     <div class="container pt-10 pb-20 lg:pb-24 flex lg:block flex-col">
         <div class="flex items-center mb-6 order-1 justify-center lg:justify-start">
-            <img class="hidden lg:block" src="images/sound-icon.svg" alt="">
+            <button class="audio-play !cursor-pointer"><img class="hidden lg:block cursor-pointer" src="images/sound-icon.svg" alt=""></button>
+            <audio class="audio opacity-0 invisible absolute">
+                <source src="media/audio.mp3" type="audio/mpeg">
+            </audio>
             <ul class="pl-8 lg:pl-6 flex flex-wrap items-center justify-center lg:justify-start">
                 <li class="mr-8 before:content-[''] before:hidden before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5 before:lg:top-2.5 before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">28 Jul ‘23</li>
-                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5 lg:before:top-2.5 before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">Barishal</li>
-                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5 lg:before:top-2.5 before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">300 Seats</li>
-                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5 lg:before:top-2.5 before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">Registrations Starting Soon...</li>
+                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5  before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">Barishal</li>
+                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5  before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">300 Seats</li>
+                <li class="mr-8 before:content-[''] before:absolute before:-left-4 before:w-1 before:h-1 before:rounded-full before:top-1.5  before:bg-white relative text-xs lg:text-base mb-2 lg:mb-0">Registrations Starting Soon...</li>
             </ul>
         </div>
         <div class="relative text-center lg:text-start">
@@ -61,7 +64,7 @@
 <div class="wrapper relative pb-10 lg:pb-20">
     <div class="parallax-bg absolute lg:top-[-120px] left-0 w-full h-full -z-[1]">
         <video width="250" autoplay muted loop class="w-full parallax-video">
-            <source src="images/bg-wave.webm" type="video/webm">
+            <source src="images/bg-wave.mov" type="video/mp4">
         </video>
     </div>
     
@@ -69,8 +72,8 @@
     <section class="mb-10 lg:mb-20 relative" id="intro">
         <div class="container mb-10">
            <div class="bg-[#212025] md:bg-transparent px-4 md:p-0 py-6 rounded-2xl mb-6 md:mb-0">
-            <p class="mb-4  font-medium hidden md:block text-[#AAAAAA]">We will place platinum sponsor’s logo here</p>
-            <p class="mb-8  font-medium text-center md:hidden text-[#AAAAAA]">Platinum sponsor’s logo here</p>
+            <p class="mb-4 hidden md:block text-light">We will place platinum sponsor’s logo here</p>
+            <p class="mb-8 text-center md:hidden text-light">Platinum sponsor’s logo here</p>
             <div class="swiper sponsor-carousel md:mb-[70px]">
                 <div class="swiper-wrapper items-center grid md:flex grid-cols-2 gap-8 justify-between md:gap-0 md:justify-start">
                     <div class="swiper-slide">
@@ -154,6 +157,7 @@
                 <div class="row text-center md:text-start">
                     <div class="md:col-4 mb-6 lg:mb-0">
                         <h2 class="h4">প্রাচ্যের ভেনিস বরিশালে <br> আপনাকে স্বাগতম। </h2>
+                        <h3 class="text-2xl font-medium mt-8 gradient-text">২৮ জুলাই, ২০২৩</h3>
                     </div>
                     <div class="md:col-8">
                         প্রথম বারের মত শুধু মাত্র ডিজাইনারদের নিয়ে বরিশাল বিভাগে এতবড় একটি ইভেন্টের আয়োজন করা হচ্ছে, যা আগামী ২৮ জুলাই, ২০২৩ এ বরিশাল জেলা শিল্পকলা একাডেমী তে দিনব্যাপী অনুষ্ঠিত হবে। সম্পুর্নো প্রোগ্রামে সারা বাংলাদেশ থেকে ৩০০ এর অধিক ডিজাইনার একত্রিত হবে, প্রফেশনাল নেটওয়ার্কিং হবে, সিনিয়র-জুনিয়র নলেজ শেয়ারিং হবে, আড্ডা হবে, খাওয়া দাওয়া হবে, সাথে থাকছে পোর্টফোলিও রিভিউয়ের সুযোগ। দেরী না করে খুব দ্রুত রেজিস্ট্রেশন করে ফেলুন। দেখা হচ্ছে ইনভেন্ট এর দিন, ইনশা’আল্লাহ।
@@ -189,7 +193,7 @@
                             </div>
                         </div>
                         <div class="person">
-                            <img class="person-img" src="images/speakers/speaker-1.png" alt="">
+                            <img class="person-img" src="images/speakers/speaker-2.png" alt="">
                             <div class="person-info">
                                 <h4 class="mb-2">Namchara
                                     Manush</h4>
@@ -198,7 +202,7 @@
                             </div>
                         </div>
                         <div class="person">
-                            <img class="person-img" src="images/speakers/speaker-1.png" alt="">
+                            <img class="person-img" src="images/speakers/speaker-3.png" alt="">
                             <div class="person-info">
                                 <h4 class="mb-2">Namchara
                                     Manush</h4>
@@ -207,7 +211,7 @@
                             </div>
                         </div>
                         <div class="person">
-                            <img class="person-img" src="images/speakers/speaker-1.png" alt="">
+                            <img class="person-img" src="images/speakers/speaker-4.png" alt="">
                             <div class="person-info">
                                 <h4 class="mb-2">Namchara
                                     Manush</h4>
@@ -216,7 +220,7 @@
                             </div>
                         </div>
                         <div class="person">
-                            <img class="person-img" src="images/speakers/speaker-1.png" alt="">
+                            <img class="person-img" src="images/speakers/speaker-5.png" alt="">
                             <div class="person-info">
                                 <h4 class="mb-2">Namchara
                                     Manush</h4>
@@ -225,7 +229,7 @@
                             </div>
                         </div>
                         <div class="person">
-                            <img class="person-img" src="images/speakers/speaker-1.png" alt="">
+                            <img class="person-img" src="images/speakers/speaker-6.png" alt="">
                             <div class="person-info">
                                 <h4 class="mb-2">Namchara
                                     Manush</h4>
@@ -255,18 +259,17 @@
             <div class="row">
                 <div class="col-6 xl:col-4">
                     <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-1.png" alt="">
+                        <img class="person-img" src="images/guests/ahmed-hasan.png" alt="">
                         <div class="person-info">
-                            <h4 class="mb-2">Mamun
-                                Srizon</h4>
-                            <p class="mb-1 text-sm md:text-base">Design System Manager,</p>
-                            <p class="text-sm md:text-base text-primary">Upwork</p>
+                            <h4 class="mb-2">Ahmed Hasan</h4>
+                            <p class="mb-1 text-sm md:text-base">Lead Product Designer </p>
+                            <p class="text-sm md:text-base text-primary">Zelf Inc.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 xl:col-4">
                     <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-2.png" alt="">
+                        <img class="person-img" src="images/guests/ahmad-firoz.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Ahmad
                                 Firoz</h4>
@@ -277,7 +280,139 @@
                 </div>
                 <div class="col-6 xl:col-4">
                     <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-4.png" alt="">
+                        <img class="person-img" src="images/guests/anam-ahmed.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Anam Ahmed</h4>
+                            <p class="mb-1 text-sm md:text-base">Head of Engineering,</p>
+                            <p class="text-sm md:text-base text-primary">Zelf Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/anamoul-rouf.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Anamoul Rouf</h4>
+                            <p class="mb-1 text-sm md:text-base">Sr. Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Playground Labs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/atiqur-rahman.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Atiqur Rahman</h4>
+                            <p class="mb-1 text-sm md:text-base">UX Lead,</p>
+                            <p class="text-sm md:text-base text-primary">Tutubi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/ea-shiblu.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Eftekharul Alam Shiblu</h4>
+                            <p class="mb-1 text-sm md:text-base">Lead Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">UBIX.AI</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/imran-khan-limon.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Imran Khan Limon</h4>
+                            <p class="mb-1 text-sm md:text-base">Head of Design,</p>
+                            <p class="text-sm md:text-base text-primary">Day Translations, Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/ishtiauq-khan-parag.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Ishtiaq Khan Parag</h4>
+                            <p class="mb-1 text-sm md:text-base">Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Elegant Themes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/khalid-hasan-zibon.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Khalid Hasan Zibon</h4>
+                            <p class="mb-1 text-sm md:text-base">Lead Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Intelligent Machines Limited</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/mamun-srizon.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Mamun
+                                Srizon</h4>
+                            <p class="mb-1 text-sm md:text-base">Design System Manager,</p>
+                            <p class="text-sm md:text-base text-primary">Upwork</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/mehedi-hasan.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Mehedi
+                                Hasan</h4>
+                            <p class="mb-1 text-sm md:text-base">Founder,</p>
+                            <p class="text-sm md:text-base text-primary">MehediHas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/mikhail-lukhtenko.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Mikhail Lukhtenko</h4>
+                            <p class="mb-1 text-sm md:text-base">Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Meta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/nasir-uddin-musemind.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Nasir Uddin</h4>
+                            <p class="mb-1 text-sm md:text-base">Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Elegant Themes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/nasir-uddin-burhan.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Nasir Uddin Burhan</h4>
+                            <p class="mb-1 text-sm md:text-base">CEO,</p>
+                            <p class="text-sm md:text-base text-primary">Nurency Digital</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/rezaur-rahman.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Rezaur Rahman</h4>
+                            <p class="mb-1 text-sm md:text-base">UX Researcher,</p>
+                            <p class="text-sm md:text-base text-primary">InsideMaps, Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/shamsuddin-chowdhury.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Shamsuddin Chowdhury</h4>
                             <p class="mb-1 text-sm md:text-base">Head of Design,</p>
@@ -287,18 +422,27 @@
                 </div>
                 <div class="col-6 xl:col-4">
                     <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-5.png" alt="">
+                        <img class="person-img" src="images/guests/shasshoto-seeam.png" alt="">
                         <div class="person-info">
-                            <h4 class="mb-2">Atiqur
-                                Rahaman</h4>
-                            <p class="mb-1 text-sm md:text-base">UX Lead,</p>
-                            <p class="text-sm md:text-base text-primary">Tutubi</p>
+                            <h4 class="mb-2">Shassho Seeam</h4>
+                            <p class="mb-1 text-sm md:text-base">Principal Designer,</p>
+                            <p class="text-sm md:text-base text-primary">LifeData</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 xl:col-4">
                     <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-6.png" alt="">
+                        <img class="person-img" src="images/guests/shahadat-shemul.png" alt="">
+                        <div class="person-info">
+                            <h4 class="mb-2">Shahadat Shemul</h4>
+                            <p class="mb-1 text-sm md:text-base">Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Micropreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 xl:col-4">
+                    <div class="person mb-10 lg:mb-[60px]">
+                        <img class="person-img" src="images/guests/shoaib-mahmud.png" alt="">
                         <div class="person-info">
                             <h4 class="mb-2">Shoaib Mahmud</h4>
                             <p class="mb-1 text-sm md:text-base">Product Designer,</p>
@@ -308,72 +452,11 @@
                 </div>
                 <div class="col-6 xl:col-4">
                     <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-7.png" alt="">
+                        <img class="person-img" src="images/guests/tanveer-junayed.png" alt="">
                         <div class="person-info">
-                            <h4 class="mb-2">Sashoto Seeam</h4>
-                            <p class="mb-1 text-sm md:text-base">Principal Designer,</p>
-                            <p class="text-sm md:text-base text-primary">LifeData</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 xl:col-4">
-                    <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-8.png" alt="">
-                        <div class="person-info">
-                            <h4 class="mb-2">Nasir
-                                Uddin</h4>
-                            <p class="mb-1 text-sm md:text-base">CEO,</p>
-                            <p class="text-sm md:text-base text-primary">Nurency Digital</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 xl:col-4">
-                    <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-9.png" alt="">
-                        <div class="person-info">
-                            <h4 class="mb-2">Eftakher Alam Siblu</h4>
-                            <p class="mb-1 text-sm md:text-base">Lead Product Designer,</p>
-                            <p class="text-sm md:text-base text-primary">UBIX Labs</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 xl:col-4">
-                    <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-10.png" alt="">
-                        <div class="person-info">
-                            <h4 class="mb-2">Imran Khan Limon</h4>
-                            <p class="mb-1 text-sm md:text-base">Head of Design,</p>
-                            <p class="text-sm md:text-base text-primary">Day Translations, Inc</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 xl:col-4">
-                    <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-11.png" alt="">
-                        <div class="person-info">
-                            <h4 class="mb-2">Shahadat Rahman</h4>
-                            <p class="mb-1 text-sm md:text-base">Ekhane position,</p>
-                            <p class="text-sm md:text-base text-primary">Compnay</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 xl:col-4">
-                    <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-12.png" alt="">
-                        <div class="person-info">
-                            <h4 class="mb-2">Ahmed Hasan</h4>
-                            <p class="mb-1 text-sm md:text-base">Lead Product Designer,</p>
-                            <p class="text-sm md:text-base text-primary">Zelf Inc. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 xl:col-4">
-                    <div class="person mb-10 lg:mb-[60px]">
-                        <img class="person-img" src="images/guests/guest-3.png" alt="">
-                        <div class="person-info">
-                            <h4 class="mb-2">Khalid Hasan Zibon</h4>
-                            <p class="mb-1 text-sm md:text-base">Lead Product Designer,</p>
-                            <p class="text-sm md:text-base text-primary">Intelligent Machines Limited</p>
+                            <h4 class="mb-2">Tanveer Junayed</h4>
+                            <p class="mb-1 text-sm md:text-base">Ex- Senior Product Designer,</p>
+                            <p class="text-sm md:text-base text-primary">Houzz</p>
                         </div>
                     </div>
                 </div>
@@ -383,10 +466,10 @@
     <div class="marquee mb-10 lg:mb-20">
         <div class="marquee-wrapper">
             <div class="marquee-slide">
-                <p class="scroll-item text-[#29272E]">designers / portfolio Review </p>
+                <p class="scroll-item text-white">designers / portfolio Review </p>
             </div>
             <div class="marquee-slide">
-                <p class="scroll-item text-[#29272E]">designers / portfolio Review </p>
+                <p class="scroll-item text-white">designers / portfolio Review </p>
             </div>
         </div>
     </div>
@@ -515,7 +598,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a class="register-cta btn btn-primary" href="#">
+                <a class="register-cta btn btn-primary px-2" href="#">
                     <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="40" height="32" rx="16" fill="#CE2471" fill-opacity="0.2" />
                         <g clip-path="url(#clip0_1_29)">
@@ -534,10 +617,10 @@
         <div class="marquee">
             <div class="marquee-wrapper">
                 <div class="marquee-slide">
-                    <p class="scroll-item text-[#29272E]">designers / portfolio Review </p>
+                    <p class="scroll-item text-white">designers / portfolio Review </p>
                 </div>
                 <div class="marquee-slide">
-                    <p class="scroll-item text-[#29272E]">designers / portfolio Review </p>
+                    <p class="scroll-item text-white">designers / portfolio Review </p>
                 </div>
             </div>
         </div>
@@ -561,7 +644,7 @@
                             <img class="card-icon" src="images/card-icon-1.png" alt="">
                             <div class="card-content">
                                 <span>Title Sponsor</span>
-                                <h3 class="h2 xl:text-[78px]">100k BDT</h3>
+                                <h3 class="h2 xl:text-[78px]">200k BDT</h3>
                                 <ol class="list-decimal pl-6">
                                     <li>The event will be featured by the title sponsor.</li>
                                     <li>A cursor displaying the sponsor's logo in a sticky manner on the event website.</li>
@@ -582,7 +665,7 @@
                             <img class="card-icon" src="images/card-icon-2.png" alt="">
                             <div class="card-content">
                                 <span>Platinum Sponsor</span>
-                                <h3 class="h2 xl:text-[78px]">40k BDT</h3>
+                                <h3 class="h2 xl:text-[78px]">80k BDT</h3>
                                 <ol class="list-decimal pl-6">
                                     <li>Online publicity, including our email list, Facebook group, and event.</li>
                                     <li>Banners from the sponsors will hang all around the venue.</li>
@@ -602,7 +685,7 @@
                             <img class="card-icon" src="images/card-icon-3.png" alt="">
                             <div class="card-content">
                                 <span>Co-Sponsor</span>
-                                <h3 class="h2 xl:text-[78px]">15k BDT</h3>
+                                <h3 class="h2 xl:text-[78px]">20k BDT</h3>
                                 <ol class="list-decimal pl-6">
                                     <li>Online publicity, including our email list, Facebook group, and event.</li>
                                     <li>Banners from the sponsors will hang all around the venue.</li>
@@ -644,8 +727,8 @@
                         <img class="inline-block" src="images/artisanal-convergence-sm.svg" alt="">
                     </div>
                     <div class="flex md:block items-center md:col-3 lg:col-6 md:text-end  md:static px-0 md:px-3">
-                        <h4 class="text-base xl:text-[32px] font-primary mb-1 lg:mb-6 mr-6 mb:mr-0 whitespace-nowrap">Powered by</h4>
-                        <img class="inline-block max-w-[138px] md:max-w-auto" src="images/title-sponsor.svg" alt="">
+                        <p class="text-light mb-4">Powered by</p>
+                        <img class="inline-block max-w-[200px]" src="images/title-sponsor.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -700,14 +783,14 @@
             </div>
             <!-- co-sponsors -->
             <div class="bg-[#1B1A1F] rounded-2xl p-6 xl:p-12 xl:py-6">
-                <div class="row">
+                <div class="row items-center">
                     <div class="lg:col-3 mb-6 lg:mb-0">
                         <p class="text-2xl lg:text-[2rem]">Co-Sponsors</p>
                     </div>
-                    <div class="lg:col-9 flex items-center flex-wrap  lg:justify-end -mt-6">
-                        <img class="my-6 mr-4 md:mr-16" src="images/sponsors/co-sponsor-1.svg" alt="">
-                        <img class="my-6 mr-4 md:mr-16" src="images/sponsors/co-sponsor-2.svg" alt="">
-                        <img class="my-6 mr-4 md:mr-16" src="images/sponsors/co-sponsor-3.svg" alt="">
+                    <div class="lg:col-9 flex items-center flex-wrap  lg:justify-end ">
+                        <img class="my-2 mr-4 md:mr-16" src="images/sponsors/co-sponsor-1.svg" alt="">
+                        <img class="my-2 mr-4 md:mr-16" src="images/sponsors/co-sponsor-2.svg" alt="">
+                        <img class="my-2 mr-4 md:mr-16" src="images/sponsors/co-sponsor-3.svg" alt="">
                         <img src="images/sponsors/co-sponsor-4.svg" alt="">
                     </div>
                 </div>
@@ -741,150 +824,134 @@
             <div class="tab-content-panel p-0 active" data-tab-panel="0">
                 <div class="col-12 explore-tab tab border-0" data-tab-group="explore-tab-inner-1">
                     <ul class="tab-nav flex items-center flex-nowrap overflow-auto mb-10 border-b-0" data-tab-nav>
-                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold cursor-pointer border-0" data-tab="0">
+                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold border-0" data-tab="0">
                             <span class="block font-normal text-xs">01</span>
-                            গুঠিয়া মসজিদ
+                            বঙ্গবন্ধু উদ্যান (বেল’স পার্ক)
                         </li>
-                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold cursor-pointer border-0" data-tab="1">
+                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold border-0" data-tab="1">
                             <span class="block font-normal text-xs">02</span>
-                            পেয়ারা বাগান
+                            ৩০ গোডাউন 
                         </li>
-                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold cursor-pointer border-0" data-tab="2">
+                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold border-0" data-tab="2">
                             <span class="block font-normal text-xs">03</span>
-                            কুয়াকাটা সমুদ্র সৈকত
+                            বিবির পুকুর
                         </li>
-                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold cursor-pointer border-0" data-tab="3">
+                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold border-0" data-tab="3">
                             <span class="block font-normal text-xs">04</span>
-                            নেছারাবাদ মাদ্রাসাহ
+                            শাহীদ আব্দুররব সেরনিবাদ সেতু 
                         </li>
                     </ul>
                     <div class="tab-content" data-tab-content>
                         <div class="tab-content-panel p-0 active" data-tab-panel="0">
                             <div class="lg:flex lg:space-x-16 items-center border-b border-white/30 pb-6">
                                 <div class="mb-6 lg:mb-0">
-                                    <h4 class="mb-4">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ</h4>
-                                    <p class=" text-light">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ। মসজিদটির আসল নাম বাইতুল আমান জামে মসজিদ হলেও দক্ষিণাঞ্চলবাসীর কাছে গুঠিয়া মসজিদ নামেই ব্যাপক পরিচিত। মসজিদ ও ঈদগাহ কমপ্লেক্সের মূল গেট দিয়ে প্রবেশ করলে ডান পাশে রয়েছে একটি পুকুর, পুকুরটির চারপাশ নানান রঙের ফুল ও গাছ দিয়ে সাজানো।</p>
+                                    <h4 class="mb-4">বঙ্গবন্ধু উদ্যান (বেল’স পার্ক)</h4>
+                                    <p class=" text-light">বঙ্গবন্ধু উদ্যান (যা বেল’স পার্ক নামেও পরিচিত) বরিশালে অবস্থিত একটি নগর উদ্যান এবং বিনোদন এলাকা। এই উদ্যানটি বরিশালের সুন্দর এলাকাগুলির একটি, যাতে একটি খেলার মাঠ, হাঁটার পথ, হেলিপ্যাড, প্রচুর গাছ এবং পাশে একটি হ্রদ রয়েছে । উদ্যানটি কয়েক দশক ধরে বরিশাল শহরের প্রধান খেলার মাঠ ছিল এবং সমস্ত ক্রীড়া ও ক্রীড়াবিদদের কার্যক্রম এটিকে কেন্দ্র করে হত। এটি অনেক মহা জনসমাবেশের জন্য ব্যবহৃত হয়েছে যেখানে বঙ্গবন্ধু শেখ মুজিবুর রহমান, জিয়াউর রহমান, হুসেইন মুহাম্মদ এরশাদ, শেখ হাসিনা, খালেদা জিয়াসহ অন্য অনেক জাতীয় নেতা এসেছিলেন এবং মানুষের কাছে বক্তৃতা দিয়েছেন । এছাড়া এখানে বৃক্ষমেলা, বাণিজ্যমেলা, কুচকাওয়াজ সহ বিভিন্ন সামাজিক এবং সাংস্কৃতিক অনুষ্ঠানের আয়োজন করা হয়।</p>
                                 </div>
-                                <a class="w-full sm:w-auto flex sm:inline-flex items-center btn btn-secondary whitespace-nowrap justify-between justify-center" href="#">
-                                    Get Direction
-                                    <i class="ml-2.5 text-secondary fa fa-arrow-right"></i>
-                                </a>
                             </div>
                             <div class="pt-6">
-                                <h5 class="mb-2 text-light font-bold font-primary">ফটো গ্যালারি</h5>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">ফটো গ্যালারি</h5>
                                 <div class="swiper gallery-carousel mb-4">
                                     <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-6">
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-1.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/bangabandhu-udyan/bells-park-1.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-2.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/bangabandhu-udyan/bells-park-2.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-3.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/bangabandhu-udyan/bells-park-3.png" alt="gallery">
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="mb-2 text-light font-bold font-primary">কিভাবে যাবেন?</h5>
-                                <p class="mb-6">আমাদের ইভেন্ট লোকেশনের ঠিক অপরপাশেই বঙ্গবন্ধু উদ্যান অবস্থিত, আপনারা হেঁটেই চলে যেতে পারবেন উদ্যানে।</p>
-                                <h5 class="mb-2 text-light">সেখানে কি কি করা যেতে পারে? </h5>
-                                <p>উদ্যানে বসে কিছু মুহূর্তে আড্ডা দিলে ভালো সময় কেটে যাবে। তাছাড়া উদ্যানের পাঁশে অবস্থিত লেকের পারে বসেও দারুণ মুহুর্ত উপভোগ করা যেতে পারে। পাশাপাশি বঙ্গবন্ধু উদ্যানের মূল রাস্তার পাঁশে প্রচুর ষ্ট্রীট ফুড পাওয়া যায়, যা খুবই মুখরোচক। বিশেষ করে অমুক ভাইয়ের ফুচকা, অমুক ভাইয়ের ঝালমুড়ি, এলফুডি এর ওয়েজেস ইত্যাদি। </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">কিভাবে যাবেন?</h5>
+                                <p class="mb-6">আমাদের প্রোগ্রামের ভেন্যু শিল্পকলা একাডেমির বিপরীতে অবস্থিত এই উদ্যান।  পায়ে হেটে গিয়েই এই উদ্যানের সৌন্দর্য উপভোগ করতে পারেন ।</p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold">সেখানে কি কি করা যেতে পারে? </h5>
+                                <p>সন্ধ্যার পরে আপনি এখানে নানা রকম মুখরোচক খাবার সমূহের ফুডকার্ট দেখতে পাবেন। সুবিশাল মাঠের মধ্যে বসে নিরিবিলি কিছুক্ষণ আড্ডা জমাতে পারেন। সম্পূর্ণ উদ্যানটি ঘুরে দেখতে সাধারণত এক ঘন্টা সময় নেয়া উচিত ।</p>
                             </div>
                         </div>
                         <div class="tab-content-panel p-0" data-tab-panel="1">
                             <div class="lg:flex lg:space-x-16 items-center border-b border-white/30 pb-6">
                                 <div class="mb-6 lg:mb-0">
-                                    <h4 class="mb-4">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ #2</h4>
-                                    <p class=" text-light">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ। মসজিদটির আসল নাম বাইতুল আমান জামে মসজিদ হলেও দক্ষিণাঞ্চলবাসীর কাছে গুঠিয়া মসজিদ নামেই ব্যাপক পরিচিত। মসজিদ ও ঈদগাহ কমপ্লেক্সের মূল গেট দিয়ে প্রবেশ করলে ডান পাশে রয়েছে একটি পুকুর, পুকুরটির চারপাশ নানান রঙের ফুল ও গাছ দিয়ে সাজানো।</p>
+                                    <h4 class="mb-4">৩০ গোডাউন রিভার ভিউ পার্ক ও বধ্যভূমি</h4>
+                                    <p class=" text-light">বরিশাল শহরের অন্যতম জনপ্রয় একটি স্থান হল ৩০ গোডাউন । এখানে একটি রিভার ভিউ পার্ক ও মুক্তিযুদ্ধ সৃতি স্তম্ভ রয়েছে । এই পার্কের কোন টিকিট মূল্য নেই। এটি বরিশালের একটি শুটিং স্পট হিসেবেও পরিচিত । এখানে রয়েছে দুটি বধ্যভূমি যাকে ঘিরে রয়েছে মুক্তিযুদ্ধের নিমর্মতার ইতিহাস । একটি কৃর্তনখোলা নদীর তীর ঘেঁষে অবস্থিত অন্যটি ওয়াপদা কলনির দক্ষিন পাশে সাগরদী খালের উপর 'বাঙ্কার ব্রীজ' নামে পরিচিত । এই বধ্যভূমিটির সঙ্গে একটি টর্চার সেল ও একটি বাঙ্কার রয়েছে । এখানে রয়েছে হানাদারদের নানান রকমের পৈশাচিক কার্যকলাপের ইতিহাস। বর্তমানে দর্শনার্থীদের জন্য এই টর্চার সেলটি সরকারি অর্থায়নে নতুন করে সংস্কারন করা হয়েছে ।</p>
                                 </div>
-                                <a class="w-full sm:w-auto flex sm:inline-flex items-center btn btn-secondary whitespace-nowrap justify-between justify-center" href="#">
-                                    Get Direction
-                                    <i class="ml-1.5 text-secondary fa fa-arrow-right"></i>
-                                </a>
                             </div>
                             <div class="pt-6">
-                                <h5 class="mb-2 text-light font-bold font-primary">ফটো গ্যালারি</h5>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">ফটো গ্যালারি</h5>
                                 <div class="swiper gallery-carousel mb-4">
                                     <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-6">
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-1.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/30-godown/30-godown-1.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-2.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/30-godown/30-godown-2.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-3.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/30-godown/30-godown-3.png" alt="gallery">
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="mb-2 text-light font-bold font-primary">কিভাবে যাবেন?</h5>
-                                <p class="mb-6">আমাদের ইভেন্ট লোকেশনের ঠিক অপরপাশেই বঙ্গবন্ধু উদ্যান অবস্থিত, আপনারা হেঁটেই চলে যেতে পারবেন উদ্যানে।</p>
-                                <h5 class="mb-2 text-light">সেখানে কি কি করা যেতে পারে? </h5>
-                                <p>উদ্যানে বসে কিছু মুহূর্তে আড্ডা দিলে ভালো সময় কেটে যাবে। তাছাড়া উদ্যানের পাঁশে অবস্থিত লেকের পারে বসেও দারুণ মুহুর্ত উপভোগ করা যেতে পারে। পাশাপাশি বঙ্গবন্ধু উদ্যানের মূল রাস্তার পাঁশে প্রচুর ষ্ট্রীট ফুড পাওয়া যায়, যা খুবই মুখরোচক। বিশেষ করে অমুক ভাইয়ের ফুচকা, অমুক ভাইয়ের ঝালমুড়ি, এলফুডি এর ওয়েজেস ইত্যাদি। </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">কিভাবে যাবেন?</h5>
+                                <p class="mb-6">বরিশাল শহর থেকে রিক্সা  ও অটো যোগে অতি অল্প সময়ে যাওয়া সম্ভব । শিল্প কলা একাডেমি থেকে  অটো ও সিএনজি ভাড়াঃ ৫০-১০০ টাকা ।  এ ছাড়াও শিল্প কলা একাডেমি থেকে ৫-১০ টাকা দিয়ে বরিশাল শেরে-ই-বাংলা মেডিকেল কলেজ ও হাসপাতালের সামনে ৩০ গোডাউন রোডের মুখে নেমে রিক্সা যোগেও খুব কম খরচে যাওয়া সম্ভব । </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold">সেখানে কি কি করা যেতে পারে? </h5>
+                                <p>এখানে রিভার ভিউ যেকোন দর্শনার্থীদের কাছেই মনোমুগ্ধকর । একদিকে মানুষের কোলাহল অন্য দিকে প্রকৃতির অপরুপ ছোঁয়া যেকোন মানুষের জন্যই প্রসান্তি এনে দেয় । দশর্নার্থীদের জন্য বিশেষ করে বসার জন্য বেঞ্চ রয়েছে যার জন্য কোন অর্থ দিতে হয় না । এখান থেকে কীর্তনখোলা নদীতে নৌকা ভ্রমনের সুবিধা রয়েছে যা ঘন্টা প্রতি ২০০-৩০০ টাকা । রিভার ভিউ এবং ফাস্ট ফুড সহ বিভিন্ন মুখরোচক খাবার ও রয়েছে এখানে । এখানে সব থেকে জনপ্রিয় খাবারের মধ্যে রয়েছে বোম্বাই সিঙ্গারা। তবে এসব কিছুর জন্য সবচেয়ে উপযুক্ত সময় হলো বিকেল ৪ টা থেকে রাত ১০ টা পযর্ন্ত ।</p>
                             </div>
                         </div>
                         <div class="tab-content-panel p-0" data-tab-panel="2">
                             <div class="lg:flex lg:space-x-16 items-center border-b border-white/30 pb-6">
                                 <div class="mb-6 lg:mb-0">
-                                    <h4 class="mb-4">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ #3</h4>
-                                    <p class=" text-light">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ। মসজিদটির আসল নাম বাইতুল আমান জামে মসজিদ হলেও দক্ষিণাঞ্চলবাসীর কাছে গুঠিয়া মসজিদ নামেই ব্যাপক পরিচিত। মসজিদ ও ঈদগাহ কমপ্লেক্সের মূল গেট দিয়ে প্রবেশ করলে ডান পাশে রয়েছে একটি পুকুর, পুকুরটির চারপাশ নানান রঙের ফুল ও গাছ দিয়ে সাজানো।</p>
+                                    <h4 class="mb-4">বিবির পুকুর</h4>
+                                    <p class=" text-light">বরিশাল শহর গিয়ে যদি আপনি ঐতিহ্যবাহী একটি জলাশয় দেখতে চান তবে বিবির পুকুর একটি সুন্দর পর্যটন স্থান । শহরের প্রাণকেন্দ্রে শতবছরের চিহ্ন ধারণ করে দাঁড়িয়ে আছে এই বিবির পুকুর। ১৯০৮ খ্রিস্টাব্দে জিন্নাত বিবি জনমানুষের জলের কষ্ট নিরসনের উদ্দেশ্যে এই পুকুর খনন করেন । নগরীর সদর রোডের পূর্ব পাশে অবস্থিত বিবির পুকুরের দৈর্ঘ্য ১৮৫০ ফুট এবং প্রস্থ ৪০০ ফুট। পরবর্তীতে জিন্নাত বিবির নামানুসারে শতবর্ষী পুকুরটি বিবির পুকুর নামে পরিচিত হয়ে উঠে । এর পাশাপাশি বিবির পুকুরের পাশেই উন্মুক্ত বিনোদন কেন্দ্র পাবলিক স্কয়ার (বর্তমানে হিরণ স্কয়ার নামে পরিচিত) এবং পুকুরের মধ্যে ফোয়ারা পুকুরটিকে অপরূপ করে তুলেছে । </p>
                                 </div>
-                                <a class="w-full sm:w-auto flex sm:inline-flex items-center btn btn-secondary whitespace-nowrap justify-between justify-center" href="#">
-                                    Get Direction
-                                    <i class="ml-1.5 text-secondary fa fa-arrow-right"></i>
-                                </a>
                             </div>
                             <div class="pt-6">
-                                <h5 class="mb-2 text-light font-bold font-primary">ফটো গ্যালারি</h5>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">ফটো গ্যালারি</h5>
                                 <div class="swiper gallery-carousel mb-4">
                                     <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-6">
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-1.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/bibir-pukur/bibir-pukur-1.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-2.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/bibir-pukur/bibir-pukur-2.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-3.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/bibir-pukur/bibir-pukur-3.png" alt="gallery">
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="mb-2 text-light font-bold font-primary">কিভাবে যাবেন?</h5>
-                                <p class="mb-6">আমাদের ইভেন্ট লোকেশনের ঠিক অপরপাশেই বঙ্গবন্ধু উদ্যান অবস্থিত, আপনারা হেঁটেই চলে যেতে পারবেন উদ্যানে।</p>
-                                <h5 class="mb-2 text-light">সেখানে কি কি করা যেতে পারে? </h5>
-                                <p>উদ্যানে বসে কিছু মুহূর্তে আড্ডা দিলে ভালো সময় কেটে যাবে। তাছাড়া উদ্যানের পাঁশে অবস্থিত লেকের পারে বসেও দারুণ মুহুর্ত উপভোগ করা যেতে পারে। পাশাপাশি বঙ্গবন্ধু উদ্যানের মূল রাস্তার পাঁশে প্রচুর ষ্ট্রীট ফুড পাওয়া যায়, যা খুবই মুখরোচক। বিশেষ করে অমুক ভাইয়ের ফুচকা, অমুক ভাইয়ের ঝালমুড়ি, এলফুডি এর ওয়েজেস ইত্যাদি। </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">কিভাবে যাবেন?</h5>
+                                <p class="mb-6">আমাদের ইভেন্ট লোকেশন থেকে ১.২কিলোমিটার দূরত্ব সদর রোডে অবস্থিত, আপনারা ভেন্যু থেকে বের হয়ে অটোরিকশায় লঞ্চ ঘাট নেমে সেখান থেকে হেঁটে যেতে পারেন অথবা রিক্সা যোগে ৩০ টাকা ভাড়া দিয়ে চলে যেতে পারেন। </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold">সেখানে কি কি করা যেতে পারে? </h5>
+                                <p>পুকুরটি শহরের কেন্দ্রস্থলে হওয়ায় ও যাতায়াত সুবিধা ভালো থাকার দরুন অনেক রাত পর্যন্ত এখানে মানুষ ভিড় করে । পুকুরের পাশে বাহারী রকমের মুখরোচক খাবারও পাওয়া যায়; এখানের মরিচ চা, মাল্টা চা এবং আলুর চপ সহ অন্যান্য ষ্ট্রীটফুড খুব বিখ্যাত। খুবই সৌন্দর্যে ভরা পুকুরের চারিপাশ। সন্ধ্যায় পাখির কলতানিও শুনতে পারবেন পূর্ব পাড় থেকে। ওখানে হাজারো পাখির ডাক শোনা যায় ঠিক সন্ধ্যার সময়টাতে ।</p>
                             </div>
                         </div>
                         <div class="tab-content-panel p-0" data-tab-panel="3">
                             <div class="lg:flex lg:space-x-16 items-center border-b border-white/30 pb-6">
                                 <div class="mb-6 lg:mb-0">
-                                    <h4 class="mb-4">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ #4</h4>
-                                    <p class=" text-light">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ। মসজিদটির আসল নাম বাইতুল আমান জামে মসজিদ হলেও দক্ষিণাঞ্চলবাসীর কাছে গুঠিয়া মসজিদ নামেই ব্যাপক পরিচিত। মসজিদ ও ঈদগাহ কমপ্লেক্সের মূল গেট দিয়ে প্রবেশ করলে ডান পাশে রয়েছে একটি পুকুর, পুকুরটির চারপাশ নানান রঙের ফুল ও গাছ দিয়ে সাজানো।</p>
+                                    <h4 class="mb-4">শহীদ আব্দুর রব সেরনিয়াবাত সেতু, দপদপিয়া</h4>
+                                    <p class=" text-light">শহীদ আব্দুর রব সেরনিয়াবাত সেতু বাংলাদেশে উচু সেতু গুলোর একটি। এটি বরিশাল এবং পটুয়াখালী জেলার সংযোগ সেতু। এটি দপদপিয়া সেতু নামেও পরিচিত। রূপাতলি বাস স্ট্যান্ড থেকে বরিশাল বিশ্ববিদ্যালয় যেতে হলে এই সেতু দিয়ে যেতে হবে। এই ব্রিজের উপর থেকে কীর্তনখোলা নদীর সৌন্দর্য্য উপভোগ করা যায় ।</p>
                                 </div>
-                                <a class="w-full sm:w-auto flex sm:inline-flex items-center btn btn-secondary whitespace-nowrap justify-between justify-center" href="#">
-                                    Get Direction
-                                    <i class="ml-1.5 text-secondary fa fa-arrow-right"></i>
-                                </a>
                             </div>
                             <div class="pt-6">
-                                <h5 class="mb-2 text-light font-bold font-primary">ফটো গ্যালারি</h5>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">ফটো গ্যালারি</h5>
                                 <div class="swiper gallery-carousel mb-4">
                                     <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-6">
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-1.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/abdur-rab-setu/dopdopia-bridge-1.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-2.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/abdur-rab-setu/dopdopia-bridge-2.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-3.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/after-event/abdur-rab-setu/dopdopia-bridge-3.png" alt="gallery">
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="mb-2 text-light font-bold font-primary">কিভাবে যাবেন?</h5>
-                                <p class="mb-6">আমাদের ইভেন্ট লোকেশনের ঠিক অপরপাশেই বঙ্গবন্ধু উদ্যান অবস্থিত, আপনারা হেঁটেই চলে যেতে পারবেন উদ্যানে।</p>
-                                <h5 class="mb-2 text-light">সেখানে কি কি করা যেতে পারে? </h5>
-                                <p>উদ্যানে বসে কিছু মুহূর্তে আড্ডা দিলে ভালো সময় কেটে যাবে। তাছাড়া উদ্যানের পাঁশে অবস্থিত লেকের পারে বসেও দারুণ মুহুর্ত উপভোগ করা যেতে পারে। পাশাপাশি বঙ্গবন্ধু উদ্যানের মূল রাস্তার পাঁশে প্রচুর ষ্ট্রীট ফুড পাওয়া যায়, যা খুবই মুখরোচক। বিশেষ করে অমুক ভাইয়ের ফুচকা, অমুক ভাইয়ের ঝালমুড়ি, এলফুডি এর ওয়েজেস ইত্যাদি। </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">কিভাবে যাবেন?</h5>
+                                <p class="mb-6">এ ব্রিজে যেতে চাইলে প্রথমে রুপাতলী তে যেতে হবে । জেলা শিল্পকলা একাডেমি থেকে অটো অথবা রিকশা তে করে যেতে পারেন সেখানে, ভাড়া নিবে অটোতে ১৫ টাকা এবং রিকশা তে ৪০/৫০ টাকা । রুপাতলী থেকে বরিশাল বিশ্ববিদ্যালয়ের উদ্দেশ্যে অটো যায় সেগুলোতে উঠে বললেই হবে দপদপিয়া ব্রিজে নামিয়ে দিতে, ভাড়া নিবে ১৫/২০ টাকা ।</p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold">সেখানে কি কি করা যেতে পারে? </h5>
+                                <p>এখানে ঘোরার জন্য উপযুক্ত সময় হল বিকেল/সন্ধ্যা বেলা । কৃতনখোলা নদীর একটা লম্বা ভিউ দেখার সাথে বিকেলের লাল সূর্য মন কাড়বে আপনাদের । এর পাশাপাশ আপনারা চাইলে ব্রিজ পার হয়ে বরিশাল বিশ্ববিদ্যালয়ে ঘুরে আসতে পারেন ।</p>
                             </div>
                         </div>
                     </div>
@@ -894,150 +961,134 @@
                 The Next Day
                 <div class="col-12 explore-tab tab border-0" data-tab-group="explore-tab-inner-2">
                     <ul class="tab-nav flex items-center flex-nowrap overflow-auto mb-10 border-b-0" data-tab-nav>
-                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold cursor-pointer border-0" data-tab="0">
+                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold border-0" data-tab="0">
                             <span class="block font-normal text-xs">01</span>
+                            ভাসমান পেয়েরা বাগান 
+                        </li>
+                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold border-0" data-tab="1">
+                            <span class="block font-normal text-xs">02</span>
                             গুঠিয়া মসজিদ
                         </li>
-                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold cursor-pointer border-0" data-tab="1">
-                            <span class="block font-normal text-xs">02</span>
-                            পেয়ারা বাগান
-                        </li>
-                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold cursor-pointer border-0" data-tab="2">
+                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold border-0" data-tab="2">
                             <span class="block font-normal text-xs">03</span>
-                            কুয়াকাটা সমুদ্র সৈকত
+                            কুয়াকাটা
                         </li>
-                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold cursor-pointer border-0" data-tab="3">
+                        <li class="tab-nav-item mr-6 lg:mr-12 font-semibold border-0" data-tab="3">
                             <span class="block font-normal text-xs">04</span>
-                            নেছারাবাদ মাদ্রাসাহ
+                            নেসারাবাদ মাদ্রাসাহ এবং গাবখান ব্রিজ
                         </li>
                     </ul>
                     <div class="tab-content" data-tab-content>
                         <div class="tab-content-panel p-0 active" data-tab-panel="0">
                             <div class="lg:flex lg:space-x-16 items-center border-b border-white/30 pb-6">
                                 <div class="mb-6 lg:mb-0">
-                                    <h4 class="mb-4">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ</h4>
-                                    <p class=" text-light">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ। মসজিদটির আসল নাম বাইতুল আমান জামে মসজিদ হলেও দক্ষিণাঞ্চলবাসীর কাছে গুঠিয়া মসজিদ নামেই ব্যাপক পরিচিত। মসজিদ ও ঈদগাহ কমপ্লেক্সের মূল গেট দিয়ে প্রবেশ করলে ডান পাশে রয়েছে একটি পুকুর, পুকুরটির চারপাশ নানান রঙের ফুল ও গাছ দিয়ে সাজানো।</p>
+                                    <h4 class="mb-4">ভাসমান পেয়েরা বাজার ও কীর্ত্তিপাশা জমিদার বাড়ি</h4>
+                                    <p class=" text-light">ঝালকাঠি, বরিশাল এবং পিরোজপুরের সিমান্তবর্তী এলাকায় গড়ে উঠেছে এশিয়া মহাদেশের বৃহত্তম ঐতিহাসিক পেয়ারা বাগান । ভাসমান পেয়ারা বাজার ভিবিন্ন স্থান এ বসলেও এর মধ্যে সবচেয়ে জনপ্রিয় হলো ভিমরুলি, আটঘর, কুড়িয়ানা বাজার । অনেকে এই ভাসমান বাজার সমুহকে থাইল্যান্ড এর ফ্লোটিং মার্কেট এর সাথে তুলনা করে থাকেন । প্রতিদিন কয়েক হাজার মন পেয়ারা বেচাকিনি হয় এই অঞ্চলে । দূর দুরান্ত থেকে নদীপথে পাইকাররা এসে এখানে পেয়ারা সহ অন্যান্য জিনিস কিনে । জুলাই, আগস্ট পেয়ারার মৌসুম হলেও মাঝে মাঝে সেপ্টেম্বর পর্যন্ত বাজার চলে । ভাসমান পেয়ারা বাজার দেখতে জুলাই, আগস্ট মাস সবচেয়ে উপযোগী সময়। সকাল ১১ টার পর পেয়ারা বাজারের ভীড় কমতে থাকে তাই খুব সকালে ৭ - ৮ টার মধ্যে  বাজারে যাওয়াই সবচেয়ে ভাল ।</p>
                                 </div>
-                                <a class="w-full sm:w-auto flex sm:inline-flex items-center btn btn-secondary whitespace-nowrap justify-between justify-center" href="#">
-                                    Get Direction
-                                    <i class="ml-2.5 text-secondary fa fa-arrow-right"></i>
-                                </a>
                             </div>
                             <div class="pt-6">
-                                <h5 class="mb-2 text-light font-bold font-primary">ফটো গ্যালারি</h5>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">ফটো গ্যালারি</h5>
                                 <div class="swiper gallery-carousel mb-4">
                                     <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-6">
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-1.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/peyara-bagan/peyara-bagan-1.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-2.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/peyara-bagan/peyara-bagan-2.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-3.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/peyara-bagan/kirrtipasha-jomidar-bari-1.png" alt="gallery">
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="mb-2 text-light font-bold font-primary">কিভাবে যাবেন?</h5>
-                                <p class="mb-6">আমাদের ইভেন্ট লোকেশনের ঠিক অপরপাশেই বঙ্গবন্ধু উদ্যান অবস্থিত, আপনারা হেঁটেই চলে যেতে পারবেন উদ্যানে।</p>
-                                <h5 class="mb-2 text-light">সেখানে কি কি করা যেতে পারে? </h5>
-                                <p>উদ্যানে বসে কিছু মুহূর্তে আড্ডা দিলে ভালো সময় কেটে যাবে। তাছাড়া উদ্যানের পাঁশে অবস্থিত লেকের পারে বসেও দারুণ মুহুর্ত উপভোগ করা যেতে পারে। পাশাপাশি বঙ্গবন্ধু উদ্যানের মূল রাস্তার পাঁশে প্রচুর ষ্ট্রীট ফুড পাওয়া যায়, যা খুবই মুখরোচক। বিশেষ করে অমুক ভাইয়ের ফুচকা, অমুক ভাইয়ের ঝালমুড়ি, এলফুডি এর ওয়েজেস ইত্যাদি। </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">কিভাবে যাবেন?</h5>
+                                <p class="mb-6">বরিশাল শাহরের হাতেম আলি কলেজ চৌমাথা থেকে লেগুনা কিংবা মাহিন্দ্রা ভাড়া করে নবগ্রাম রোড হয়ে যেতে হবে কুরিয়ানা নৌকা বাজার । সেখান থেকে নৌকা কিংবা টলার ভাড়া করে ভিমরুলই বাজার জেতে হবে । নৌকা কিংবা টলার ভাড়া করার জন্য বেশি মানুষ হলে  ভাল কারন কম মানুষ হলে তলনামুলক জনপ্রতি ভাড়া বেশি পরে। তাই একসাথে কয়েকজন যেতে পারলে ভালো হয় ।</p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold">সেখানে কি কি করা যেতে পারে? </h5>
+                                <p>ভাসমান বাজার এর সবথেকে উপভোগ্য বিষয় হল নৌকা ভ্রমণ। নৌকা করে ভিমরুলি বাজার যাওয়ার পথে ছোট ছোট খাল, দুইপাশে গাছ এবং গাছের ছায়াতলে নদী পথ পারি দেওয়ার সময় অসংখ্য নৌকা পেয়েরা নিয়ে চলাচলের দৃশ্য যেকোনো ভ্রমণ প্রিয় মানুষের মনে প্রশান্তি এনে দেয় । ভিমরুলি বাজারে নেমে কম মূল্যে পেয়েরা কেনা, ভাত ও মুখরোচক খাবারেরও ব্যবস্থা রয়েছে এখানে । এছাড়াও আপনারা চাইলে একই সাথে কীর্ত্তিপাশা জমিদার বাড়ি ঘুরে আসতে পারেন । ১৯ শতকের প্রথম দিকে বিক্রমপুর জমিদার বংশের রাজা রাম সেনগুপ্ত এই কীর্ত্তিপাশা জমিদার বাড়িটি তার দুই ছেলের জন্য নির্মাণ করেন । তবে কীর্ত্তিপাশা জমিদার বাড়িতে যেতে চাইলে নৌকা কিংবা টলার ভাড়া করার সময় চুক্তি করে নেওয়া দরকার।</p>
                             </div>
                         </div>
                         <div class="tab-content-panel p-0" data-tab-panel="1">
                             <div class="lg:flex lg:space-x-16 items-center border-b border-white/30 pb-6">
                                 <div class="mb-6 lg:mb-0">
-                                    <h4 class="mb-4">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ #2</h4>
-                                    <p class=" text-light">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ। মসজিদটির আসল নাম বাইতুল আমান জামে মসজিদ হলেও দক্ষিণাঞ্চলবাসীর কাছে গুঠিয়া মসজিদ নামেই ব্যাপক পরিচিত। মসজিদ ও ঈদগাহ কমপ্লেক্সের মূল গেট দিয়ে প্রবেশ করলে ডান পাশে রয়েছে একটি পুকুর, পুকুরটির চারপাশ নানান রঙের ফুল ও গাছ দিয়ে সাজানো।</p>
+                                    <h4 class="mb-4">বায়তুল আমান জামে মসজিদ বা গুঠিয়া মসজিদ ও দুর্গাসাগর দিঘী </h4>
+                                    <p class=" text-light">গুটিয়া মসজিদ (Guthia Mosque) এশিয়ার অন্যতম বৃহত্তম জামে মসজিদ, যা বরিশাল বিভাগে উজিরপুর থানার গুটিয়া ইউনিয়নের চাংগুরিয়া গ্রামে অবস্থিত। বরিশাল শহর থেকে ১১ কিলোমিটার দূরে ১৪ একর জমির উপর মসজিদটি ২০টি গম্বুজ নিয়ে বিশাল এই মসজিদটি গড়ে তোলা হয়েছে । গুটিয়া মসজিদ নামে পরিচিতি পেলেও এর নাম বাইতুল আমান । এসএএস ফাউন্ডেশনের তত্ত্বাবধানে ১৬ ডিসেম্বর,  ২০০৩ সালে মসজিদ কমপ্লেক্সের নির্মাণ কাজ শুরু হয়। তৎকালীন সময়ে নির্মাণ ব্যয় ছিল ২০০ মিলিয়ন টাকা । কমপ্লেক্সটি ২০ অক্টোবর ২০০৬ তারিখে উদ্বোধন করা হয়, যেখানে তিনটি বিশাল লেক, একটি মসজিদ, একটি এতিমখানা, একটি মাদ্রাসা, একটি ঈদগাহ এবং সাদা মার্বেল দিয়ে নির্মিত ৫৪ মিটার উঁচু মিনার রয়েছে ।</p>
                                 </div>
-                                <a class="w-full sm:w-auto flex sm:inline-flex items-center btn btn-secondary whitespace-nowrap justify-between justify-center" href="#">
-                                    Get Direction
-                                    <i class="ml-1.5 text-secondary fa fa-arrow-right"></i>
-                                </a>
                             </div>
                             <div class="pt-6">
-                                <h5 class="mb-2 text-light font-bold font-primary">ফটো গ্যালারি</h5>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">ফটো গ্যালারি</h5>
                                 <div class="swiper gallery-carousel mb-4">
                                     <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-6">
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-1.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/guthia-mosque/guthia-mosque-1.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-2.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/guthia-mosque/guthia-mosque-2.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-3.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/guthia-mosque/durga-sagar-1.png" alt="gallery">
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="mb-2 text-light font-bold font-primary">কিভাবে যাবেন?</h5>
-                                <p class="mb-6">আমাদের ইভেন্ট লোকেশনের ঠিক অপরপাশেই বঙ্গবন্ধু উদ্যান অবস্থিত, আপনারা হেঁটেই চলে যেতে পারবেন উদ্যানে।</p>
-                                <h5 class="mb-2 text-light">সেখানে কি কি করা যেতে পারে? </h5>
-                                <p>উদ্যানে বসে কিছু মুহূর্তে আড্ডা দিলে ভালো সময় কেটে যাবে। তাছাড়া উদ্যানের পাঁশে অবস্থিত লেকের পারে বসেও দারুণ মুহুর্ত উপভোগ করা যেতে পারে। পাশাপাশি বঙ্গবন্ধু উদ্যানের মূল রাস্তার পাঁশে প্রচুর ষ্ট্রীট ফুড পাওয়া যায়, যা খুবই মুখরোচক। বিশেষ করে অমুক ভাইয়ের ফুচকা, অমুক ভাইয়ের ঝালমুড়ি, এলফুডি এর ওয়েজেস ইত্যাদি। </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">কিভাবে যাবেন?</h5>
+                                <p class="mb-6">বারিশাল নাথুল্লাহবাথ বাস স্ট্যান্ড এ এসে বারিশাল টু বানারিপারার বাস কাউন্টারে গুটিয়া মসজিদের উদ্দেশ্যে বাসের টিকেট কাটলেই আপনাকে একদম মসজিদ গেটে নামিয়ে দিবে। এছাড়াও মাহিন্দ্রা কিংবা সিএনজি ভাড়া করে চলে যেতে পাড়েন ।</p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold">সেখানে কি কি করা যেতে পারে? </h5>
+                                <p>এই মসজিদে নামাজ আদায়করে মসজিদের কমপ্লেক্সের ভেতরে থাকা ২০ হাজার লোকের ধারণক্ষমতার ঈদগাহ্ ময়দান, একটি ডাকবাংলো, এতিমখানা, পুকুর, লেক, ফুলের বাগান এবং সাদা মার্বেল দিয়ে নির্মিত ৫৪ মিটার উঁচু মিনারসহ এর নিখুঁত ডিজাইন দেখতে পারবেন । এ ছাড়া বারিশাল থেকে গুঠিয়া আসার পথে বারিশালের জনপ্রিয় দুর্গাসাগর দিঘী ঘুরে আসতে পারেন । এটি দক্ষিণে বরিশাল জেলার অন্তর্গত একটি বৃহৎ দিঘী। শুধু জলাভূমির আকার ২৭ একর । পার্শবর্তী পাড় ও জমি সহ মোট আয়তন ৪৫.৪২ একর । ১৭৮০ সালে চন্দ্রদ্বীপের পঞ্চদশ রাজা শিব নারায়ন এই বিশাল জলাধারটি খনন করেন । তার স্ত্রী দুর্গামতির নামানুসারে এর নাম করন করা হয় দুর্গাসাগর। ১৯৭৪ সালে তৎকালিন সরকারের উদ্যোগে দিঘীটি পুনরায় সংস্কার করা হয় । বর্তমানে “দুর্গাসাগর দিঘীর উন্নয়ন ও পাখির অভয়ারন্য” নামে একটি প্রকল্পের অধিনে বরিশাল জেলা প্রশাসন দিঘীটির তত্ত্বাবধান করছে ।</p>
                             </div>
                         </div>
                         <div class="tab-content-panel p-0" data-tab-panel="2">
                             <div class="lg:flex lg:space-x-16 items-center border-b border-white/30 pb-6">
                                 <div class="mb-6 lg:mb-0">
-                                    <h4 class="mb-4">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ #3</h4>
-                                    <p class=" text-light">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ। মসজিদটির আসল নাম বাইতুল আমান জামে মসজিদ হলেও দক্ষিণাঞ্চলবাসীর কাছে গুঠিয়া মসজিদ নামেই ব্যাপক পরিচিত। মসজিদ ও ঈদগাহ কমপ্লেক্সের মূল গেট দিয়ে প্রবেশ করলে ডান পাশে রয়েছে একটি পুকুর, পুকুরটির চারপাশ নানান রঙের ফুল ও গাছ দিয়ে সাজানো।</p>
+                                    <h4 class="mb-4">কুয়াকাটা সমুদ্র সৈকতু</h4>
+                                    <p class=" text-light">সাগরকণ্যা কুয়াকাটা বাংলাদেশ সহ পৃথিবীর সকল পর্যটকের কাছে অন্যন্য নাম । ১৮ কিলোমিটার দৈর্ঘ্যের সৈকত বিশিষ্ট কুয়াকাটা বাংলাদেশের অন্যতম নৈসর্গিক সমুদ্র সৈকত । এটি বাংলাদেশের একমাত্র সৈকত যেখান থেকে সূর্যোদয় এবং সূর্যাস্ত দুটোই দেখা যায় । কুয়াকাটা সমুদ্র সৈকতটি কলাপাড়া উপজেলার লতাচাপলি ইউনিয়নের সর্বদক্ষিণে অবস্থিত । ‘কুয়া’ শব্দটি এসেছে ‘কুপ’ থেকে । ১৮ শতকে মুঘল শাসকদের দ্বারা বার্মা থেকে বিতাড়িত হয়ে আরকানরা এই অঞ্চলে এসে বসবাস শুরু করে। তখন এখানে সুপেয় জলের অভাব পূরণ করতে তারা প্রচুর কুয়ো বা কুপ খনন করেছিলেনে, সেই থেকেই এই অঞ্চলের নাম হয়ে যায় কুয়াকাটা ।</p>
                                 </div>
-                                <a class="w-full sm:w-auto flex sm:inline-flex items-center btn btn-secondary whitespace-nowrap justify-between justify-center" href="#">
-                                    Get Direction
-                                    <i class="ml-1.5 text-secondary fa fa-arrow-right"></i>
-                                </a>
                             </div>
                             <div class="pt-6">
-                                <h5 class="mb-2 text-light font-bold font-primary">ফটো গ্যালারি</h5>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">ফটো গ্যালারি</h5>
                                 <div class="swiper gallery-carousel mb-4">
                                     <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-6">
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-1.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/kuakata-beach/kuakata-1.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-2.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/kuakata-beach/kuakata-2.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-3.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/kuakata-beach/kuakata-3.png" alt="gallery">
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="mb-2 text-light font-bold font-primary">কিভাবে যাবেন?</h5>
-                                <p class="mb-6">আমাদের ইভেন্ট লোকেশনের ঠিক অপরপাশেই বঙ্গবন্ধু উদ্যান অবস্থিত, আপনারা হেঁটেই চলে যেতে পারবেন উদ্যানে।</p>
-                                <h5 class="mb-2 text-light">সেখানে কি কি করা যেতে পারে? </h5>
-                                <p>উদ্যানে বসে কিছু মুহূর্তে আড্ডা দিলে ভালো সময় কেটে যাবে। তাছাড়া উদ্যানের পাঁশে অবস্থিত লেকের পারে বসেও দারুণ মুহুর্ত উপভোগ করা যেতে পারে। পাশাপাশি বঙ্গবন্ধু উদ্যানের মূল রাস্তার পাঁশে প্রচুর ষ্ট্রীট ফুড পাওয়া যায়, যা খুবই মুখরোচক। বিশেষ করে অমুক ভাইয়ের ফুচকা, অমুক ভাইয়ের ঝালমুড়ি, এলফুডি এর ওয়েজেস ইত্যাদি। </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">কিভাবে যাবেন?</h5>
+                                <p class="mb-6">বরিশাল শহরের রুপাতলী বাস স্টান্ডে এসে বরিশাল টু কিয়াকাটা বাস টিকিট বুক করবেন ।  এই বাস সরাসরি কুয়াকাটা সমুদ্র সৈকত চৌমাথায় গিয়ে যাত্রিদের নামিয়ে দিবে। সেখান থেকে ২ মিনিটের পথ সমুদ্র সৈকত ।</p>
+                                <h5 class="mb-2 text-[#8b8b8c] text-primary font-bold">সেখানে কি কি করা যেতে পারে? </h5>
+                                <p>কুয়াকাটার মূল আকর্ষণ সমুদ্র সৈকত। সমুদ্র সৈকতে দাড়ালে দক্ষিণে যতদূর চোখ যায় ততদূর নীলাকাশ । বেলাভূমিতে প্রতিমুহুর্তে আছড়ে পড়ছে ঢেউ। সমুদ্র সৈকতে হাজার হাজার পর্যটকদের জন্য বেসরকারিভাবে বসার জায়গা, ঘোড়া, গাড়ি, খাবার সহ বিভিন্ন ব্যবস্থা রয়েছে ।  কুয়াকাটার কুয়া, শ্রীমঙ্গল বৌদ্ধ বিহার(এখানে নয়টি ধাতুর সমন্বয়ে তৈরি বৌদ্ধ মূতি রয়েছে), নৌকা জাদুঘর, কেরানি পাড়া, কুয়াকাটা জাতীয় উদ্যান (ইকোপার্ক), গঙ্গামতির চর, মিশ্রিপাড়া সীমা বৌদ্ধ বিহার, ইলিশ পার্ক এন্ড রিসোর্ট, শুটকি পল্লী, স্বপ্নরাজ্য পার্ক ও রিসোর্ট, লেম্বুর বন, ফাতরার, লাল কাঁকড়ার চর, সোনার চর সহ বিশেষ কিছু স্থানে ভ্রমন কারতে পারেন ।</p>
                             </div>
                         </div>
                         <div class="tab-content-panel p-0" data-tab-panel="3">
                             <div class="lg:flex lg:space-x-16 items-center border-b border-white/30 pb-6">
                                 <div class="mb-6 lg:mb-0">
-                                    <h4 class="mb-4">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ #4</h4>
-                                    <p class=" text-light">বায়তুল আমান জামে মসজিদ ও ঈদগাহ কমপ্লেক্স বা গুঠিয়া মসজিদ। মসজিদটির আসল নাম বাইতুল আমান জামে মসজিদ হলেও দক্ষিণাঞ্চলবাসীর কাছে গুঠিয়া মসজিদ নামেই ব্যাপক পরিচিত। মসজিদ ও ঈদগাহ কমপ্লেক্সের মূল গেট দিয়ে প্রবেশ করলে ডান পাশে রয়েছে একটি পুকুর, পুকুরটির চারপাশ নানান রঙের ফুল ও গাছ দিয়ে সাজানো।</p>
+                                    <h4 class="mb-4">ঝালকাঠি এন এস কামিল মাদরাসা ও গাবখান সেতু</h4>
+                                    <p class=" text-light">ঝালকাঠি এন এস কামিল মাদরাসা বা নেছারাবাদ কামিল মাদরাসা বরিশাল বিভাগের ঝালকাঠি জেলা শহরে অবস্থিত বাংলাদেশের একটি স্বনামধন্য ও জাতীয় পর্যায়ে শ্রেষ্ঠ শিক্ষাপ্রতিষ্ঠান। এটি ঝালকাঠি জেলার বাসন্ডায় অবস্থিত। ১৯৫৬ সালে মাওলানা মুহাম্মদ আযীযুর রহমান নেছারাবাদী মাদরাসাটি প্রতিষ্ঠা করেন। এ মাদ্রাসাটিতে দাখিল, আলিম, ফাজিল, কামিল সব শ্রেণি মিলিয়ে প্রায় সাড়ে ৫ হাজার ছাত্র রয়েছে ।</p>
                                 </div>
-                                <a class="w-full sm:w-auto flex sm:inline-flex items-center btn btn-secondary whitespace-nowrap justify-between justify-center" href="#">
-                                    Get Direction
-                                    <i class="ml-1.5 text-secondary fa fa-arrow-right"></i>
-                                </a>
                             </div>
                             <div class="pt-6">
-                                <h5 class="mb-2 text-light font-bold font-primary">ফটো গ্যালারি</h5>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">ফটো গ্যালারি</h5>
                                 <div class="swiper gallery-carousel mb-4">
                                     <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-6">
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-1.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/nesarabad-gabkhan/nesarabad-1.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-2.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/nesarabad-gabkhan/nesarabad-2.png" alt="gallery">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/gallery-img-3.png" alt="gallery">
+                                            <img class="w-full object-cover h-full rounded-2xl" src="images/gallery/next-day-event/nesarabad-gabkhan/gabkhan-1.png" alt="gallery">
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="mb-2 text-light font-bold font-primary">কিভাবে যাবেন?</h5>
-                                <p class="mb-6">আমাদের ইভেন্ট লোকেশনের ঠিক অপরপাশেই বঙ্গবন্ধু উদ্যান অবস্থিত, আপনারা হেঁটেই চলে যেতে পারবেন উদ্যানে।</p>
-                                <h5 class="mb-2 text-light">সেখানে কি কি করা যেতে পারে? </h5>
-                                <p>উদ্যানে বসে কিছু মুহূর্তে আড্ডা দিলে ভালো সময় কেটে যাবে। তাছাড়া উদ্যানের পাঁশে অবস্থিত লেকের পারে বসেও দারুণ মুহুর্ত উপভোগ করা যেতে পারে। পাশাপাশি বঙ্গবন্ধু উদ্যানের মূল রাস্তার পাঁশে প্রচুর ষ্ট্রীট ফুড পাওয়া যায়, যা খুবই মুখরোচক। বিশেষ করে অমুক ভাইয়ের ফুচকা, অমুক ভাইয়ের ঝালমুড়ি, এলফুডি এর ওয়েজেস ইত্যাদি। </p>
+                                <h5 class="mb-2 text-[#8b8b8c] font-bold font-primary">কিভাবে যাবেন?</h5>
+                                <p class="mb-6">বারিশাল শাহরের রুপাতলি বাস স্ট্যান্ডে এসে বাস, মাহিন্দ্রা,  কিংবা মটরসাইকেল ভাড়া করে জালকাথা  বাস স্ট্যান্ডে নেমে রিকশা কিংবা অটোতে করে যেতে হবে বাশন্দা ব্রিজ। সেখানে নেমে অন্য কোন রিকশা কিংবা অটোতে যেতে হবে এন এস কামিল মাদরাসার গেঁটে । </p>
+                                <h5 class="mb-2 text-[#8b8b8c] text-primary font-bold">সেখানে কি কি করা যেতে পারে? </h5>
+                                <p>এন এস কামিল মাদরাসার সামনে নদী এবং এর পারেই সিড়িবাধান ঘাঁট, মসজিদ কম্পাউন্ডের মধ্যে প্রবেশ করে এর বিশাল এরিয়াতে ঘুরে বেড়ান, মসজিদ এ নামাজ আদায়,  মাওলানা মুহাম্মদ আযীযুর রহমানের (কায়েদ সাহেব হুজুর) কবর জিয়ারত করতে পারেন । এছাড়াও যেতে পারেন গাবখান সেত । বাংলার সুয়েজ খাল খ্যাত গাবখান চ্যানেলের উপর প্রতিষ্ঠিত ৫ম বাংলাদেশ চীন-মৈত্রী সেতুটিই গাবখান সেতু (Gabkhan Bridge) নামে পরিচিত । সন্ধ্যা ও সুগন্ধা নদীর মধ্যে সংযোগ স্থাপনকারী বাংলাদেশের একমাত্র কৃত্রিম নৌপথ গাবখান চ্যানেলের দৈর্ঘ্য প্রায় ১৮ কিলোমিটার।</p>
                             </div>
                         </div>
                     </div>
@@ -1047,3 +1098,12 @@
     </div>
 </section>
 <!-- end explore -->
+
+<!-- custom cursor -->
+<div id="custom-cursor">
+    <img class="cursor-svg" src="images/custom-cursor.svg" alt="">
+    <div class="flex items-center justify-between p-3 bg-black translate-x-[18px] translate-y-5">
+        <span class="text-[11px] inline-block mr-2.5 whitespace-nowrap">Powered by</span>
+        <img class="max-w-[66px]" src="images/title-sponsor.svg" alt="">
+    </div>
+</div>
