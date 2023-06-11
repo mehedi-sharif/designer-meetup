@@ -255,4 +255,21 @@
     var y = e.clientY;
     cursor.style.transform = "translate(" + x + "px, " + y + "px)";
   });
+
+  document.addEventListener("touchmove", (e) => {
+    var x = e.touches[0].clientX;
+    var y = e.touches[0].clientY;
+    cursor.style.transform = "translate(" + x + "px, " + y + "px)";
+  });
+
+  document.addEventListener("touchend", (e) => {
+    var x = e.touches[0].clientX;
+    var y = e.touches[0].clientY;
+    cursor.style.transform = "translate(" + x + "px, " + y + "px)";
+  });
+  document.addEventListener("touchstart", (e) => {
+    var x = e.touches[0].clientX;
+    var y = e.touches[0].clientY;
+    cursor.style.transform = "translate(" + x + "px, " + y + "px)";
+  });
 })();
