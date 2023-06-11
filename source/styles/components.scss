@@ -211,9 +211,9 @@
 
 .parallax-bg {
   transition: background-position 0.3s cubic-bezier(0.1, 0.73, 0.32, 0.89);
-  video::-webkit-media-controls {
-    display:none !important;
-  }
+  // video::-webkit-media-controls {
+  //   display:none !important;
+  // }
 }
 
 .filter-nav, .schedule-tab-nav {
