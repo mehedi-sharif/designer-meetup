@@ -146,7 +146,7 @@
   @apply md:flex items-center justify-center md:justify-start text-center md:text-start;
 
   &-img {
-    @apply mx-auto w-[120px] h-[120px] xl:w-[170px] xl:h-[170px] rounded-full md:mx-0 mb-6 md:mb-0;
+    @apply mx-auto w-[120px] h-[120px] xl:w-[170px] xl:h-[170px] rounded-full md:mx-0 mb-6 md:mb-0 flex-[1_0_auto];
   }
 
   &-info {
