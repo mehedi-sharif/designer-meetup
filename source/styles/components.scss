@@ -233,7 +233,7 @@
 
 
 #custom-cursor {
-  @apply fixed top-0 left-0 z-[100] transition-all ease-out duration-100 pointer-events-none;
+  @apply fixed top-0 left-0 z-[100] transition-all ease-out duration-100 pointer-events-none hidden lg:block;
   
   
   .cursor-svg {
