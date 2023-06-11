@@ -170,25 +170,25 @@
   });
 
   //filter-programs
-  const filterNavItems = document.querySelectorAll(".filter-nav li");
-  const allPrograms = document.querySelector(".all-programs");
+  // const filterNavItems = document.querySelectorAll(".filter-nav li");
+  // const allPrograms = document.querySelector(".all-programs");
 
-  const shuffleInstance = new Shuffle(allPrograms, {
-    itemSelector: ".program",
-  });
+  // const shuffleInstance = new Shuffle(allPrograms, {
+  //   itemSelector: ".program",
+  // });
 
-  filterNavItems.forEach((item) => {
-    item.addEventListener("click", function () {
-      const group = this.dataset.group;
-      filterNavItems.forEach((item) => item.classList.remove("active"));
-      item.classList.add("active");
-      if (group === "all") {
-        shuffleInstance.filter();
-        return;
-      }
-      shuffleInstance.filter(group);
-    });
-  });
+  // filterNavItems.forEach((item) => {
+  //   item.addEventListener("click", function () {
+  //     const group = this.dataset.group;
+  //     filterNavItems.forEach((item) => item.classList.remove("active"));
+  //     item.classList.add("active");
+  //     if (group === "all") {
+  //       shuffleInstance.filter();
+  //       return;
+  //     }
+  //     shuffleInstance.filter(group);
+  //   });
+  // });
 
   // // ########################## Tab ##########################
   function setActiveTab(tabGroup, tabName, tabGroupName) {

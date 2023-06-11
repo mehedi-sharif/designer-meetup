@@ -213,7 +213,7 @@
   transition: background-position 0.3s cubic-bezier(0.1, 0.73, 0.32, 0.89);
 }
 
-.filter-nav {
+.filter-nav, .schedule-tab-nav {
   & > li.active {
     @apply text-white;
   }
@@ -252,4 +252,12 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.schedule-tab-panel {
+  @apply hidden;
+
+  &.active {
+    @apply block;
+  }
 }

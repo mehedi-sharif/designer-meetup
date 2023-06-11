@@ -171,7 +171,7 @@
 
 
     <!-- Speakers -->
-     <!-- hidden class to be removed -->
+    <!-- hidden class to be removed -->
     <section class="my-10 lg:my-20 hidden" id="speakers">
         <div class="container">
             <div class="row">
@@ -548,7 +548,7 @@
     <!-- Schedule -->
     <section class="mt-10 lg:mt-20 overflow-hidden" id="schedule">
         <div class="container mb-10 lg:mb-20">
-            <div class="mb-16">
+            <div class="mb-16 schedule-tab" data-tab-group="schedule-tab">
                 <div class="row items-center mb-8 lg:mb-16">
                     <div class="lg:col-6 mb-6 lg:mb-0 text-center lg:text-start">
                         <p class="text-light block">Our agenda</p>
@@ -558,143 +558,231 @@
                         </h2>
                     </div>
                     <div class="lg:col-6">
-                        <ul class="flex items-center justify-center lg:justify-end -ml-3 lg:-mr-8 lg:ml-0 filter-nav">
-                            <li class="mx-3 lg:mx-8 active" data-group="all">All Programs</li>
-                            <li class="mx-3 lg:mx-8" data-group="learning">Learning For Creatives</li>
+                        <ul class="flex items-center justify-center lg:justify-end -ml-3 lg:-mr-8 lg:ml-0 schedule-tab-nav" data-tab-nav>
+                            <li class="mx-3 lg:mx-8 active" data-group="all" data-tab="0">All Programs</li>
+                            <li class="mx-3 lg:mx-8" data-group="learning" data-tab="1">Learning For Creatives</li>
                         </ul>
                     </div>
                 </div>
-                <div class="all-programs">
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups='[]'>
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">8:00 AM</h5>
-                                <span class="text-light">Sharp</span>
+                <div data-tab-content class="schedule-tab-body">
+                    <div class="schedule-tab-panel active" data-tab-panel="0">
+                        <div class="border-b border-white/30 py-2 mb-4 program" data-groups='[]'>
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">8:00 AM</h5>
+                                    <span class="text-light">Sharp</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">Gate Open</p>
+                                </div>
                             </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">Gate Open</p>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program">
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">8:00 AM - 8:45 AM</h5>
+                                    <span class="text-light">45 Mins</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">Gathering, Breakfast, Getting Ready</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program" data-groups='[]'>
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">9:06 AM - 9:11 AM</h5>
+                                    <span class="text-light">5Mins</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">Get to know Artisanal Convergence</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program" data-groups='["learning"]'>
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">9:12 AM - 10:36 AM</h5>
+                                    <span class="text-light">2.24 Hours</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">The Learning For Creatives <span class="ml-2 text-sm xl: py-1 xl:py-2 px-2 lg:px-4 bg-secondary rounded xl:rounded-lg inline-block  text-dark font-bold font-primary">First Part</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program">
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">10:37 AM- 11:30 AM</h5>
+                                    <span class="text-light">53 Mins</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">Coffee & Networking Session</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program">
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">11:31 AM- 11:56 AM</h5>
+                                    <span class="text-light">25 Mins</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">Quiz & Game</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program" data-groups='["learning"]'>
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">11:57 AM - 12:45 PM</h5>
+                                    <span class="text-light">1.20 Hours</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">The Learning For Creatives <span class="ml-2 text-sm xl: py-1 xl:py-2 px-2 lg:px-4 bg-secondary rounded xl:rounded-lg inline-block  text-dark font-bold font-primary">Second Part</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program">
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">12:46 PM - 2:29 PM</h5>
+                                    <span class="text-light">1.14 Mins</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">Prayer & Lunch Break</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program" data-groups='[]'>
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">2:30 PM - 3:30 PM</h5>
+                                    <span class="text-light">60 Mins</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">Networking + Portfolio Reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program" data-groups='["learning"]'>
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">3:31 PM - 4:11 PM</h5>
+                                    <span class="text-light">40 Mins</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">The Learning For Creatives <span class="ml-2 text-sm xl: py-1 xl:py-2 px-2 lg:px-4 bg-secondary rounded xl:rounded-lg inline-block  text-dark font-bold font-primary">Third Part</span></p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-white/30 py-2 mb-4 program" data-groups='[]'>
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">4:12 Pm - 4:41 PM</h5>
+                                    <span class="text-light">29 Mins</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">Q&A Session (Panel Discussion)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-transparent program" data-groups='[]'>
+                            <div class="row items-center">
+                                <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                    <h5 class="lg:text-[28px]">4:42 PM- 5:30 PM</h5>
+                                    <span class="text-light">48 Mins</span>
+                                </div>
+                                <div class="md:col-8 lg:col-9">
+                                    <p class="text-lg lg:text-2xl font-medium">Crests, Awards, Raffle Draw, Conclusion</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups="[]">
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">8:00 AM - 8:45 AM</h5>
-                                <span class="text-light">45 Mins</span>
+                    <div class="schedule-tab-panel" data-tab-panel="1">
+                        <div class="mb-20">
+                            <div class="flex items-center justify-between mb-3">
+                                <p class="text-lg lg:text-3xl">The Learning For Creatives <span class="ml-2 text-sm xl: py-1 xl:py-2 px-2 lg:px-4 bg-secondary rounded xl:rounded-lg inline-block  text-dark font-bold font-primary">First Part</span></p>
+                                <p class="text-lg lg:text-2xl text-[#8b8b8c]">9:12 AM - 11:36 PM (2.24 Hours)</p>
                             </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">Gathering, Breakfast, Getting Ready</p>
+                            <div class="border-b border-white/30 py-2 mb-4 program">
+                                <div class="row items-center">
+                                    <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                        <h5 class="lg:text-[28px]">9:12 AM - 9:32 AM</h5>
+                                        <span class="text-light">20 Mins</span>
+                                    </div>
+                                    <div class="md:col-8 lg:col-9">
+                                        <p class="text-lg lg:text-2xl font-medium">To be announced...</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups='[]'>
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">9:06 AM - 9:11 AM</h5>
-                                <span class="text-light">5Mins</span>
+                            <div class="border-b border-white/30 py-2 mb-4 program">
+                                <div class="row items-center">
+                                    <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                        <h5 class="lg:text-[28px]">9:44 AM - 10:04 AM</h5>
+                                        <span class="text-light">20 Mins</span>
+                                    </div>
+                                    <div class="md:col-8 lg:col-9">
+                                        <p class="text-lg lg:text-2xl font-medium">To be announced...</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">Get to know Artisanal Convergence</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups='["learning"]'>
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">9:12 AM - 10:36 AM</h5>
-                                <span class="text-light">2.24 Hours</span>
-                            </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">The Learning For Creatives <span class="ml-2 text-sm xl: py-1 xl:py-2 px-2 lg:px-4 bg-secondary rounded xl:rounded-lg inline-block  text-dark font-bold font-primary">First Part</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups="[]">
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">10:37 AM- 11:30 AM</h5>
-                                <span class="text-light">53 Mins</span>
-                            </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">Coffee & Networking Session</p>
+                            <div class="border-b border-white/30 py-2 mb-4 program">
+                                <div class="row items-center">
+                                    <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                        <h5 class="lg:text-[28px]">10:16 AM - 10:36 AM</h5>
+                                        <span class="text-light">20 Mins</span>
+                                    </div>
+                                    <div class="md:col-8 lg:col-9">
+                                        <p class="text-lg lg:text-2xl font-medium">To be announced...</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups="[]">
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">11:31 AM- 11:56 AM</h5>
-                                <span class="text-light">25 Mins</span>
+                        <div class="mb-20">
+                            <div class="flex items-center justify-between mb-3">
+                                <p class="text-lg lg:text-3xl">The Learning For Creatives <span class="ml-2 text-sm xl: py-1 xl:py-2 px-2 lg:px-4 bg-secondary rounded xl:rounded-lg inline-block  text-dark font-bold font-primary">Second Part</span></p>
+                                <p class="text-lg lg:text-2xl text-[#8b8b8c]">11:57 AM . - 12:45 PM (1.20 Hours)</p>
                             </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">Quiz & Game</p>
+                            <div class="border-b border-white/30 py-2 mb-4 program">
+                                <div class="row items-center">
+                                    <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                        <h5 class="lg:text-[28px]">11:57 AM - 12:17 PM</h5>
+                                        <span class="text-light">20 Mins</span>
+                                    </div>
+                                    <div class="md:col-8 lg:col-9">
+                                        <p class="text-lg lg:text-2xl font-medium">To be announced...</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups='["learning"]'>
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">11:57 AM - 12:45 PM</h5>
-                                <span class="text-light">1.20 Hours</span>
-                            </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">The Learning For Creatives <span class="ml-2 text-sm xl: py-1 xl:py-2 px-2 lg:px-4 bg-secondary rounded xl:rounded-lg inline-block  text-dark font-bold font-primary">Second Part</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups="[]">
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">12:46 PM - 2:29 PM</h5>
-                                <span class="text-light">1.14 Mins</span>
-                            </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">Prayer & Lunch Break</p>
+                            <div class="border-b border-white/30 py-2 mb-4 program">
+                                <div class="row items-center">
+                                    <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                        <h5 class="lg:text-[28px]">12:30 PM - 12:45 PM</h5>
+                                        <span class="text-light">15 Mins</span>
+                                    </div>
+                                    <div class="md:col-8 lg:col-9">
+                                        <p class="text-lg lg:text-2xl font-medium">To be announced...</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups='[]'>
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">2:30 PM - 3:30 PM</h5>
-                                <span class="text-light">60 Mins</span>
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <p class="text-lg lg:text-3xl">The Learning For Creatives <span class="ml-2 text-sm xl: py-1 xl:py-2 px-2 lg:px-4 bg-secondary rounded xl:rounded-lg inline-block  text-dark font-bold font-primary">Third Part</span></p>
+                                <p class="text-lg lg:text-2xl text-[#8b8b8c]">3:30 PM - 4:11 PM (41 Mins)</p>
                             </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">Networking + Portfolio Reviews</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups='["learning"]'>
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">3:31 PM - 4:11 PM</h5>
-                                <span class="text-light">40 Mins</span>
-                            </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">The Learning For Creatives <span class="ml-2 text-sm xl: py-1 xl:py-2 px-2 lg:px-4 bg-secondary rounded xl:rounded-lg inline-block  text-dark font-bold font-primary">Third Part</span></p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-b border-white/30 py-2 mb-4 program" data-groups='[]'>
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">4:12 Pm - 4:41 PM</h5>
-                                <span class="text-light">29 Mins</span>
-                            </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">Q&A Session (Panel Discussion)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-b border-transparent program" data-groups='[]'>
-                        <div class="row items-center">
-                            <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
-                                <h5 class="lg:text-[28px]">4:42 PM- 5:30 PM</h5>
-                                <span class="text-light">48 Mins</span>
-                            </div>
-                            <div class="md:col-8 lg:col-9">
-                                <p class="text-lg lg:text-2xl font-medium">Crests, Awards, Raffle Draw, Conclusion</p>
+                            <div class="border-t border-white/30 py-2 mb-4 program">
+                                <div class="row items-center">
+                                    <div class="md:col-4 lg:col-3 mb-2 md:mb-0">
+                                        <h5 class="lg:text-[28px]">3:30 PM - 4:11 PM</h5>
+                                        <span class="text-light">41 Mins</span>
+                                    </div>
+                                    <div class="md:col-8 lg:col-9">
+                                        <p class="text-lg lg:text-2xl font-medium">To be announced...</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
