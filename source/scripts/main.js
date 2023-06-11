@@ -96,25 +96,6 @@
       initScrollMarquee();
     });
 
-    function getCoords(elem) {
-      // crossbrowser version
-      var box = elem.getBoundingClientRect();
-
-      var body = document.body;
-      var docEl = document.documentElement;
-
-      var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-      var scrollLeft =
-        window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
-
-      var clientTop = docEl.clientTop || body.clientTop || 0;
-      var clientLeft = docEl.clientLeft || body.clientLeft || 0;
-
-      var top = box.top + scrollTop - clientTop;
-      var left = box.left + scrollLeft - clientLeft;
-
-      return { top: Math.round(top), left: Math.round(left) };
-    }
     //add navigation active state
     document.querySelectorAll(".nav-link").forEach((link, index, arr) => {
       link.addEventListener("click", (e) => {
@@ -136,6 +117,41 @@
       });
     });
   });
+
+  document.querySelectorAll(".navigator").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const href = e.currentTarget.getAttribute("href");
+      const section = document.getElementById(href.replace("#", ""));
+      if (!section) return;
+      if (href.match(/^#/)) {
+        const position = getCoords(section);
+        window.scrollTo({
+          top: position.top - document.querySelector(".header").clientHeight,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  function getCoords(elem) {
+    // crossbrowser version
+    var box = elem.getBoundingClientRect();
+
+    var body = document.body;
+    var docEl = document.documentElement;
+
+    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+    var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+    var clientTop = docEl.clientTop || body.clientTop || 0;
+    var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+    var top = box.top + scrollTop - clientTop;
+    var left = box.left + scrollLeft - clientLeft;
+
+    return { top: Math.round(top), left: Math.round(left) };
+  }
 
   //parallax
   const wrapper = document.querySelector(".wrapper");
