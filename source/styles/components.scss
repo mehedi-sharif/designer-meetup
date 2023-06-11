@@ -146,7 +146,10 @@
   @apply md:flex items-center justify-center md:justify-start text-center md:text-start;
 
   &-img {
-    @apply mx-auto w-[120px] h-[120px] xl:w-[170px] xl:h-[170px] rounded-full md:mx-0 mb-6 md:mb-0 flex-[1_0_auto];
+    @apply mx-auto rounded-full md:mx-0 mb-6 md:mb-0 flex-[0_0_auto];
+    img {
+      @apply w-full h-full max-w-[120px] max-h-[120px] xl:max-w-[170px] xl:max-h-[170px] mx-auto;
+    }
   }
 
   &-info {
