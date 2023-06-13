@@ -154,6 +154,10 @@
 
   &-info {
     @apply md:ml-6;
+
+    h4 {
+      @apply font-primary font-bold;
+    }
   }
 }
 

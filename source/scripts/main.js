@@ -155,7 +155,7 @@
 
   //parallax
   const wrapper = document.querySelector(".wrapper");
-  const parallaxVideo = document.querySelector(".parallax-video");
+  const parallaxVideo = document.querySelector(".parallax-element");
 
   const topPos = window.innerWidth > 992 ? "top 20%" : "top 30%";
 
