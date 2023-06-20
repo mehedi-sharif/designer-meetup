@@ -249,12 +249,12 @@
     audio.play();
   });
 
-  const cursor = document.getElementById("custom-cursor");
-  document.addEventListener("mousemove", function (e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    cursor.style.transform = "translate(" + x + "px, " + y + "px)";
-  });
+  // const cursor = document.getElementById("custom-cursor");
+  // document.addEventListener("mousemove", function (e) {
+  //   var x = e.clientX;
+  //   var y = e.clientY;
+  //   cursor.style.transform = "translate(" + x + "px, " + y + "px)";
+  // });
 
   // document.addEventListener("touchmove", (e) => {
   //   var x = e.touches[0].clientX;

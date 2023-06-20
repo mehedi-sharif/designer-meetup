@@ -39,6 +39,6 @@
 //stretch-link
 .stretch-link {
   &::before {
-    @apply content-[''] absolute left-0 top-0 w-full h-full z-[1];
+    @apply content-[''] absolute left-0 top-0 w-full h-full z-[2];
   }
 }
